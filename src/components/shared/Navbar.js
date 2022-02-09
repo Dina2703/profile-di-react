@@ -12,8 +12,11 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import HomeIcon from "@material-ui/icons/Home";
-import InfoIcon from "@material-ui/icons/Info";
+import HomeTwoToneIcon from "@material-ui/icons/HomeTwoTone";
+import WorkTwoToneIcon from "@material-ui/icons/WorkTwoTone";
+import InfoTwoToneIcon from "@material-ui/icons/InfoTwoTone";
+import ReceiptTwoToneIcon from "@material-ui/icons/ReceiptTwoTone";
+import ContactPhoneTwoToneIcon from "@material-ui/icons/ContactPhoneTwoTone";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -67,13 +70,28 @@ const Navbar = (props) => {
   const menuItems = [
     {
       text: "Home",
-      icon: <HomeIcon color="secondary" />,
+      icon: <HomeTwoToneIcon color="secondary" />,
       path: "/",
     },
     {
       text: "About",
-      icon: <InfoIcon color="secondary" />,
+      icon: <InfoTwoToneIcon color="secondary" />,
       path: "/about",
+    },
+    {
+      text: "Work",
+      icon: <WorkTwoToneIcon color="secondary" />,
+      path: "/work",
+    },
+    {
+      text: "Musings",
+      icon: <ReceiptTwoToneIcon color="secondary" />,
+      path: "/blogs",
+    },
+    {
+      text: "About",
+      icon: <ContactPhoneTwoToneIcon color="secondary" />,
+      path: "/contact",
     },
   ];
 
