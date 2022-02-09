@@ -10,7 +10,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Typography";
+import { Typography } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import HomeTwoToneIcon from "@material-ui/icons/HomeTwoTone";
 import WorkTwoToneIcon from "@material-ui/icons/WorkTwoTone";
@@ -20,7 +21,7 @@ import ContactPhoneTwoToneIcon from "@material-ui/icons/ContactPhoneTwoTone";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-const drawerWidth = 220;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -132,12 +133,14 @@ const Navbar = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Personal website
+          <Typography component="div">
+            <Box textAlign="left" m={1}>
+              Personal Website
+            </Box>
           </Typography>
         </Toolbar>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer} aria-label="navbar">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
