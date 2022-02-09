@@ -4,27 +4,22 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
+import Navbar from "./components/shared/Navbar";
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/about" element={<About />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/work" element={<Work />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/blogs" element={<Blogs />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/contact" element={<Contact />}></Route>
-        </Routes>
+        <Navbar>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/work" element={<Work />}></Route>
+            <Route path="/blogs" element={<Blogs />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+        </Navbar>
       </div>
     </Router>
   );
