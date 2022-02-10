@@ -23,11 +23,11 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Playfair Display",
+    fontFamily: "Poppins",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
-    fontWeightBold: 800,
+    fontWeightBold: 700,
     h1: {
       letterSpacing: "0.06em",
       fontWeight: 700,

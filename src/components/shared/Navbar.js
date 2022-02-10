@@ -7,6 +7,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -19,20 +20,26 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
     },
     display: "flex",
+    textTransform: "uppercase",
+    letterSpacing: "0.08em",
+    fontWeight: 600,
   },
   logo: {
     flexGrow: "1",
     cursor: "pointer",
     fontSize: "1.5em",
+    color: grey[700],
+    textTransform: "uppercase",
+
     marginLeft: theme.spacing(12),
     paddingTop: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       fontSize: "1em",
     },
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: theme.spacing(1),
     },
-    [theme.breakpoints.down("sx")]: {
+    [theme.breakpoints.down("xs")]: {
       paddingTop: theme.spacing(2),
     },
   },
@@ -42,13 +49,32 @@ const useStyles = makeStyles((theme) => ({
     fontSize: ".8em",
     marginLeft: theme.spacing(3),
     "&:hover": {
-      borderBottom: "1px solid white",
+      color: grey[600],
     },
   },
 }));
 
 function Navbar() {
   const classes = useStyles();
+
+  const menuItems = [
+    {
+      text: "home",
+      path: "/",
+    },
+    {
+      text: "about",
+      path: "/about",
+    },
+    {
+      text: "work",
+      path: "/work",
+    },
+    {
+      text: "contact",
+      path: "/contact",
+    },
+  ];
 
   return (
     <div className={classes.root}>
@@ -59,21 +85,11 @@ function Navbar() {
             Personal Website
           </Typography>
           <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
-              Home
-            </Link>
-            <Link to="/about" className={classes.link}>
-              About
-            </Link>
-            <Link to="/work" className={classes.link}>
-              Work
-            </Link>
-            <Link to="/blogs" className={classes.link}>
-              Musings
-            </Link>
-            <Link to="/contact" className={classes.link}>
-              Contact
-            </Link>
+            {menuItems.map((item) => (
+              <Link key={item.text} to={item.path} className={classes.link}>
+                {item.text}
+              </Link>
+            ))}
           </div>
         </Toolbar>
       </AppBar>
