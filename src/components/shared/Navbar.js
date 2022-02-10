@@ -25,8 +25,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
   },
   logo: {
-    flexGrow: "1",
-    cursor: "pointer",
     fontSize: "1.5em",
     color: grey[700],
     textTransform: "uppercase",
@@ -42,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       paddingTop: theme.spacing(2),
     },
+  },
+  logoLink: {
+    textDecoration: "none",
+    flexGrow: 1,
   },
   link: {
     textDecoration: "none",
@@ -81,9 +83,12 @@ function Navbar() {
       <AppBar position="static" color="primary" className={classes.appbar}>
         <CssBaseline />
         <Toolbar variant="regular">
-          <Typography variant="h1" className={classes.logo}>
-            Personal Website
-          </Typography>
+          <Link to="/" className={classes.logoLink}>
+            <Typography variant="h1" className={classes.logo}>
+              Personal Website
+            </Typography>
+          </Link>
+
           <div className={classes.navlinks}>
             {menuItems.map((item) => (
               <Link key={item.text} to={item.path} className={classes.link}>
