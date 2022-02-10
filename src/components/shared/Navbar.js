@@ -5,86 +5,75 @@ import {
   CssBaseline,
   Typography,
   makeStyles,
-  Button,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => {
-  return {
-    appbar: {
-      minHeight: "5em",
+const useStyles = makeStyles((theme) => ({
+  appbar: {
+    minHeight: "5em",
+  },
+  navlinks: {
+    marginRight: theme.spacing(12),
+    paddingTop: theme.spacing(4),
+    [theme.breakpoints.down("xs")]: {
+      marginRight: theme.spacing(2),
     },
-    navlinks: {
-      marginRight: theme.spacing(12),
-      paddingTop: theme.spacing(4),
-      [theme.breakpoints.down("xs")]: {
-        marginRight: theme.spacing(2),
-      },
-      display: "flex",
+    display: "flex",
+  },
+  logo: {
+    flexGrow: "1",
+    cursor: "pointer",
+    fontSize: "1.5em",
+    marginLeft: theme.spacing(12),
+    paddingTop: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
     },
-    logo: {
-      flexGrow: "1",
-      cursor: "pointer",
-      color: "#333",
-      fontSize: "1.5em",
-      marginLeft: theme.spacing(12),
-      paddingTop: theme.spacing(3),
-      [theme.breakpoints.down("xs")]: {
-        fontSize: "1em",
-      },
-      [theme.breakpoints.down("xs")]: {
-        marginLeft: theme.spacing(2),
-      },
-      [theme.breakpoints.down("sm")]: {
-        paddingTop: theme.spacing(2),
-      },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(2),
     },
-    link: {
-      color: "#333",
-      [theme.breakpoints.down("xs")]: {
-        paddingTop: theme.spacing(1),
-      },
-      [theme.breakpoints.down("xs")]: {
-        fontSize: ".6em",
-      },
+    [theme.breakpoints.down("sx")]: {
+      paddingTop: theme.spacing(2),
     },
-  };
-});
+  },
+  link: {
+    textDecoration: "none",
+    color: "#333",
+    fontSize: ".8em",
+    marginLeft: theme.spacing(3),
+    "&:hover": {
+      borderBottom: "1px solid white",
+    },
+  },
+}));
 
 function Navbar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar
-        position="static"
-        color="primary"
-        className={classes.appbar}
-        elevation={1}
-      >
+      <AppBar position="static" color="primary" className={classes.appbar}>
         <CssBaseline />
         <Toolbar variant="regular">
           <Typography variant="h1" className={classes.logo}>
             Personal Website
           </Typography>
-
           <div className={classes.navlinks}>
-            <Button color="secondary" href="/" className={classes.link}>
+            <Link to="/" className={classes.link}>
               Home
-            </Button>
-            <Button
-              color="secondary"
-              size="small"
-              href="/about"
-              className={classes.link}
-            >
+            </Link>
+            <Link to="/about" className={classes.link}>
               About
-            </Button>
-            <Button color="secondary" href="/work" className={classes.link}>
+            </Link>
+            <Link to="/work" className={classes.link}>
               Work
-            </Button>
-            <Button color="secondary" href="/contact" className={classes.link}>
+            </Link>
+            <Link to="/blogs" className={classes.link}>
+              Musings
+            </Link>
+            <Link to="/contact" className={classes.link}>
               Contact
-            </Button>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>

@@ -1,5 +1,4 @@
 import { Container } from "@material-ui/core";
-
 import Navbar from "./Navbar";
 
 function Layout({ children }) {
