@@ -11,10 +11,14 @@ import "./App.css";
 
 const theme = createTheme({
   palette: {
+    // type: "dark",
     primary: {
       light: "#ffffff",
       main: "#ffcdd2",
       dark: "#cb9ca1",
+    },
+    text: {
+      primary: "#616161",
     },
     secondary: {
       light: "#d7ffd9",
