@@ -8,10 +8,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body {
-  /* font-family: "Source Serif 4", sans-serif; */
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  color: #333;
-}
