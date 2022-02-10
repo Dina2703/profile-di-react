@@ -80,7 +80,12 @@ function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary" className={classes.appbar}>
+      <AppBar
+        position="static"
+        elevation={2}
+        color="primary"
+        className={classes.appbar}
+      >
         <CssBaseline />
         <Toolbar variant="regular">
           <Link to="/" className={classes.logoLink}>

@@ -12,14 +12,14 @@ import "./App.css";
 const theme = createTheme({
   palette: {
     primary: {
-      light: "#fffff6",
-      main: "#cfd8dc",
-      dark: "#9ea7aa",
+      light: "#ffffff",
+      main: "#ffcdd2",
+      dark: "#cb9ca1",
     },
     secondary: {
-      light: "#ffbebd",
-      main: "#f28d8d",
-      dark: "#bd5e60",
+      light: "#d7ffd9",
+      main: "#a5d6a7",
+      dark: "#75a478",
     },
   },
   typography: {
