@@ -19,14 +19,14 @@ const theme = createTheme({
     secondary: {
       light: "#ffbebd",
       main: "#f28d8d",
-      dark: "#bd5e60",
+      dark: "#c9845a",
     },
   },
   typography: {
-    fontFamily: "Playfair Display",
+    fontFamily: "Open Sans",
     fontWeightLight: 400,
     fontWeightRegular: 500,
-    fontWeightMedium: 600,
+    fontWeightMedium: 700,
     fontWeightBold: 800,
     h1: {
       letterSpacing: "0.06em",
