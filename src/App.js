@@ -4,14 +4,15 @@ import About from "./pages/About";
 import Work from "./pages/Work";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
-import Navbar from "./components/shared/Navbar";
+import Layout from "./components/shared/Layout";
+
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar>
+        <Layout>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
@@ -19,7 +20,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
-        </Navbar>
+        </Layout>
       </div>
     </Router>
   );
