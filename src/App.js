@@ -28,9 +28,9 @@ const theme = createTheme({
     fontWeightRegular: 500,
     fontWeightMedium: 600,
     fontWeightBold: 800,
-    caption: {
+    h1: {
       letterSpacing: "0.06em",
-      fontWeight: 600,
+      fontWeight: 700,
     },
   },
 });

@@ -9,23 +9,38 @@ import {
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+  appbar: {
+    minHeight: "5em",
+  },
   navlinks: {
-    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(12),
+    paddingTop: theme.spacing(4),
+    [theme.breakpoints.down("xs")]: {
+      marginRight: theme.spacing(2),
+    },
     display: "flex",
   },
   logo: {
     flexGrow: "1",
     cursor: "pointer",
     fontSize: "1.5em",
-    [theme.breakpoints.down("xs")]: {
+    marginLeft: theme.spacing(12),
+    paddingTop: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
       fontSize: "1em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: theme.spacing(2),
+    },
+    [theme.breakpoints.down("sx")]: {
+      paddingTop: theme.spacing(2),
     },
   },
   link: {
     textDecoration: "none",
     color: "#333",
     fontSize: ".8em",
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(3),
     "&:hover": {
       borderBottom: "1px solid white",
     },
@@ -37,10 +52,10 @@ function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="primary" className={classes.appbar}>
         <CssBaseline />
-        <Toolbar>
-          <Typography variant="caption" className={classes.logo}>
+        <Toolbar variant="regular">
+          <Typography variant="h1" className={classes.logo}>
             Personal Website
           </Typography>
           <div className={classes.navlinks}>
