@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      <Container maxWidth="md">{children}</Container>
+      <Container>{children}</Container>
     </div>
   );
 }

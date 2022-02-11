@@ -13,7 +13,6 @@ import {
   List,
   ListItem,
   Link,
-  Avatar,
 } from "@material-ui/core";
 
 import { grey } from "@material-ui/core/colors";
@@ -23,7 +22,6 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 const useStyles = makeStyles((theme) => ({
   appbar: {
     padding: 25,
-
     height: 100,
   },
   navlinks: {
@@ -52,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(3),
 
     "&:hover": {
-      color: grey[600],
+      color: grey[500],
     },
   },
 }));
@@ -85,7 +83,7 @@ function Navbar() {
       <AppBar
         position="sticky"
         elevation={2}
-        color="primary"
+        color="sticky"
         className={classes.appbar}
       >
         <CssBaseline />

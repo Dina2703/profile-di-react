@@ -20,9 +20,9 @@ const theme = createTheme({
       primary: "#616161",
     },
     secondary: {
-      light: "#d7ffd9",
-      main: "#a5d6a7",
-      dark: "#75a478",
+      light: "#ffffee",
+      main: "#ffccbc",
+      dark: "#cb9b8c",
     },
   },
   typography: {
