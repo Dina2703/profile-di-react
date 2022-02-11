@@ -81,7 +81,7 @@ function Navbar() {
   return (
     <div className={classes.root}>
       <AppBar
-        position="sticky"
+        position="fixed"
         elevation={2}
         color="sticky"
         className={classes.appbar}
