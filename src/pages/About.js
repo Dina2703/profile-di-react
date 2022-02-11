@@ -34,7 +34,7 @@ function About() {
   const [show, setShow] = useState(false);
   useEffect(() => {
     setShow(true);
-  });
+  }, []);
   return (
     <Paper className={classes.section}>
       <Container maxWidth="md" className={classes.container}>
@@ -46,9 +46,12 @@ function About() {
         >
           <Zoom in={show}>
             <Grid item sm={8}>
-              <Typography component="h1" variant="h5" color="initial">
-                Hi, my name is Dinara.
-              </Typography>
+              <Box my={3}>
+                <Typography component="h1" variant="h5" color="initial">
+                  Hi, my name is Dinara.
+                </Typography>
+              </Box>
+
               <Typography variant="subtitle1">
                 I build websites, web applications and responsive user
                 interfaces. Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -66,6 +69,9 @@ function About() {
                   <MailOutlinedIcon style={{ marginLeft: 10 }} />
                 </Button>
               </Box>
+              <Hidden smUp>
+                <Social direction="row" />
+              </Hidden>
             </Grid>
           </Zoom>
 

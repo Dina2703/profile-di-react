@@ -16,7 +16,7 @@ function Social({ direction }) {
   return (
     <Grid container direction={direction || "row"} spacing={2}>
       {socialItems.map((item) => (
-        <Grid item>
+        <Grid item key={item.icon}>
           <Link href={item.url}>
             <IconButton>
               <item.icon />
