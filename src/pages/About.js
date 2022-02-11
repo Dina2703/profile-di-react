@@ -9,6 +9,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
 import Wallpaper from "../assets/aboutWallpaper.jpg";
+import Social from "../components/shared/Social";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -58,7 +59,9 @@ function About() {
               </Button>
             </Box>
           </Grid>
-          <Grid item>Social</Grid>
+          <Grid item>
+            <Social direction="column" />
+          </Grid>
         </Grid>
       </Container>
     </Paper>
