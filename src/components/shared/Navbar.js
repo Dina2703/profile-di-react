@@ -22,10 +22,9 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    padding: 12,
-    [theme.breakpoints.down("xs")]: {
-      padding: 4,
-    },
+    padding: 25,
+
+    height: 100,
   },
   navlinks: {
     display: "flex",
@@ -47,13 +46,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   link: {
-    color: grey[700],
+    color: grey[800],
     textTransform: "lowercase",
     fontSize: 18,
     marginLeft: theme.spacing(3),
 
     "&:hover": {
-      color: grey[900],
+      color: grey[600],
     },
   },
 }));
