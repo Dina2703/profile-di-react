@@ -13,6 +13,7 @@ import {
   List,
   ListItem,
   Link,
+  Avatar,
 } from "@material-ui/core";
 
 import { grey } from "@material-ui/core/colors";
@@ -21,7 +22,10 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    minHeight: "3em",
+    padding: 12,
+    [theme.breakpoints.down("xs")]: {
+      padding: 4,
+    },
   },
   navlinks: {
     display: "flex",
@@ -30,8 +34,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
   },
   logo: {
-    fontSize: "1.5em",
+    fontSize: 40,
     textTransform: "uppercase",
+    letterSpacing: 2,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 25,
+    },
   },
 
   logoLink: {
@@ -39,12 +47,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   link: {
-    textDecoration: "none",
-    color: "#333",
-    fontSize: ".8em",
+    color: grey[700],
+    textTransform: "lowercase",
+    fontSize: 18,
     marginLeft: theme.spacing(3),
+
     "&:hover": {
-      color: grey[600],
+      color: grey[900],
     },
   },
 }));
@@ -82,14 +91,14 @@ function Navbar() {
       >
         <CssBaseline />
         <Container maxWidth="md">
-          <Toolbar variant="regular" disableGutters>
+          <Toolbar variant="regular">
             <Link href="/" className={classes.logoLink}>
               <Typography
                 color="textPrimary"
-                variant="h1"
+                variant="h6"
                 className={classes.logo}
               >
-                Personal Website
+                Dinara Idrissova
               </Typography>
             </Link>
 
@@ -97,6 +106,7 @@ function Navbar() {
               <div className={classes.navlinks}>
                 {menuItems.map((item) => (
                   <Link
+                    underline="none"
                     href={item.path}
                     key={item.text}
                     className={classes.link}
