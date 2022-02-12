@@ -6,17 +6,18 @@ import {
   Container,
   Button,
   Box,
-  Hidden,
   Zoom,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
+
 import Wallpaper from "../assets/aboutWallpaper.jpg";
-import Social from "../components/shared/Social";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
   section: {
-    height: "90vh",
+    height: "130vh",
     backgroundImage: `url(${Wallpaper})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -48,38 +49,65 @@ function About() {
             <Grid item sm={8}>
               <Box my={3}>
                 <Typography component="h1" variant="h5" color="initial">
-                  Hi, my name is Dinara.
+                  Welcome to About page
                 </Typography>
               </Box>
 
               <Typography variant="subtitle1">
-                I build websites, web applications and responsive user
-                interfaces. Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Tempora doloribus rerum consequatur quaerat ratione sunt
-                at quis soluta ullam mollitia beatae libero est corrupti
-                molestiae nemo modi a, impedit quos.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempora doloribus rerum consequatur quaerat ratione sunt at quis
+                soluta ullam mollitia beatae libero est corrupti molestiae nemo
+                modi a, impedit quos.
+              </Typography>
+
+              <Box my={3}>
+                <Typography component="h1" variant="h5" color="initial">
+                  Some kinda content
+                </Typography>
+              </Box>
+
+              <Typography variant="subtitle1">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempora doloribus rerum consequatur quaerat ratione sunt at quis
+                soluta ullam mollitia beatae libero est corrupti molestiae nemo
+                modi a, impedit quos.
               </Typography>
               <Box my={5}>
-                <Button
-                  href="mailto:dinara.idrissova@list.ru"
-                  variant="contained"
-                  color="secondary"
-                >
-                  GET IN TOUCH!
-                  <MailOutlinedIcon style={{ marginLeft: 10 }} />
-                </Button>
+                <div className={classes.root}>
+                  <Grid container spacing={4} alignContent="space-between">
+                    <Grid item xs={3}>
+                      <Button
+                        href="mailto:dinara.idrissova@list.ru"
+                        variant="contained"
+                        color="secondary"
+                      >
+                        GET IN TOUCH!
+                      </Button>
+                    </Grid>
+
+                    <Grid item xs={3}>
+                      <Button
+                        href="mailto:dinara.idrissova@list.ru"
+                        variant="contained"
+                        color="secondary"
+                      >
+                        GET IN TOUCH!
+                      </Button>
+                    </Grid>
+                    <Grid item xs={3}>
+                      <Button
+                        href="mailto:dinara.idrissova@list.ru"
+                        variant="contained"
+                        color="secondary"
+                      >
+                        GET IN TOUCH!
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </div>
               </Box>
-              <Hidden smUp>
-                <Social direction="row" />
-              </Hidden>
             </Grid>
           </Zoom>
-
-          <Hidden xsDown>
-            <Grid item>
-              <Social direction="column" />
-            </Grid>
-          </Hidden>
         </Grid>
       </Container>
     </Paper>
