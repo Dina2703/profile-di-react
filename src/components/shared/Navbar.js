@@ -134,8 +134,8 @@ function Navbar() {
                 </Link>
               </Grid>
 
-              <Grid item>
-                <Hidden xsDown>
+              <Grid item style={{ alignSelf: "end" }}>
+                <Hidden smDown>
                   <div className={classes.navlinks}>
                     {menuItems.map((item) => (
                       <Link
@@ -149,7 +149,7 @@ function Navbar() {
                     ))}
                   </div>
                 </Hidden>
-                <Hidden smUp>
+                <Hidden mdUp>
                   <IconButton>
                     <MenuIcon onClick={() => setOpen(true)} />
                   </IconButton>
