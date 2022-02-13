@@ -13,15 +13,17 @@ import {
   List,
   ListItem,
   Link,
+  Grid,
+  Box,
 } from "@material-ui/core";
-
-import { grey } from "@material-ui/core/colors";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import { grey, red } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    padding: 25,
+    paddingTop: 15,
     height: 100,
   },
   navlinks: {
@@ -31,14 +33,22 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
   },
   logo: {
-    fontSize: 40,
+    fontSize: 45,
     textTransform: "uppercase",
     letterSpacing: 2,
     [theme.breakpoints.down("sm")]: {
       fontSize: 25,
     },
+    fontFamily: "DancingScript",
+    fontWeight: 700,
+    color: red[900],
   },
-
+  logoPhrase: {
+    fontSize: 19,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 15,
+    },
+  },
   logoLink: {
     textDecoration: "none",
     flexGrow: 1,
@@ -48,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "lowercase",
     fontSize: 18,
     marginLeft: theme.spacing(3),
-
     "&:hover": {
       color: grey[500],
     },
@@ -89,35 +98,64 @@ function Navbar() {
         <CssBaseline />
         <Container maxWidth="md">
           <Toolbar variant="regular">
-            <Link href="/" className={classes.logoLink}>
-              <Typography
-                color="textPrimary"
-                variant="h6"
-                className={classes.logo}
-              >
-                Dinara Idrissova
-              </Typography>
-            </Link>
+            <Grid
+              container
+              justifyContent="space-between"
+              spacing={4}
+              className={classes.container}
+            >
+              <Grid item>
+                <Link href="/" className={classes.logoLink}>
+                  <Box>
+                    <Typography
+                      color="textSecondary"
+                      variant="h2"
+                      className={classes.logo}
+                    >
+                      Dinara Idrissova
+                    </Typography>
+                    <Box style={{ position: "relative" }}>
+                      <Typography
+                        color="textPrimary"
+                        className={classes.logoPhrase}
+                      >
+                        The Web developer with heart
+                        <FavoriteBorderIcon
+                          className={classes.logoPhrase}
+                          style={{
+                            color: "#b71c1c",
+                            marginLeft: 12,
+                            position: "absolute",
+                          }}
+                        />
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Link>
+              </Grid>
 
-            <Hidden xsDown>
-              <div className={classes.navlinks}>
-                {menuItems.map((item) => (
-                  <Link
-                    underline="none"
-                    href={item.path}
-                    key={item.text}
-                    className={classes.link}
-                  >
-                    {item.text}
-                  </Link>
-                ))}
-              </div>
-            </Hidden>
-            <Hidden smUp>
-              <IconButton>
-                <MenuIcon onClick={() => setOpen(true)} />
-              </IconButton>
-            </Hidden>
+              <Grid item>
+                <Hidden xsDown>
+                  <div className={classes.navlinks}>
+                    {menuItems.map((item) => (
+                      <Link
+                        underline="none"
+                        href={item.path}
+                        key={item.text}
+                        className={classes.link}
+                      >
+                        {item.text}
+                      </Link>
+                    ))}
+                  </div>
+                </Hidden>
+                <Hidden smUp>
+                  <IconButton>
+                    <MenuIcon onClick={() => setOpen(true)} />
+                  </IconButton>
+                </Hidden>
+              </Grid>
+            </Grid>
           </Toolbar>
         </Container>
         <SwipeableDrawer

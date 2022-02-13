@@ -18,6 +18,7 @@ const theme = createTheme({
     },
     text: {
       primary: "#616161",
+      secondary: "#37474f",
     },
     secondary: {
       light: "#ffffee",
