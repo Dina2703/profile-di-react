@@ -15,9 +15,10 @@ import homePhoto from "../assets/myPic2.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: "auto",
+    height: "90vh",
     [theme.breakpoints.down("sm")]: {
       paddingTop: 150,
+      height: "auto",
     },
   },
   content: {
