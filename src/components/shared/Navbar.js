@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     paddingTop: 15,
     height: 120,
+    background: "#ebe9e6",
   },
   navlinks: {
     display: "flex",

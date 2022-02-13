@@ -11,19 +11,31 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
 
+import homePhoto from "../assets/myPic2.jpeg";
+
 const useStyles = makeStyles((theme) => ({
   section: {
-    height: "90vh",
+    height: "auto",
     [theme.breakpoints.down("sm")]: {
-      height: "120vh",
+      paddingTop: 150,
     },
-    background: "#faedf2",
   },
   content: {
     height: "100%",
   },
   container: {
     height: "100%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    picture: {
+      order: 1,
+    },
+    bodyText: {
+      order: 2,
+    },
+    imgBox: {
+      marginLeft: 130,
+    },
   },
 }));
 
@@ -43,7 +55,7 @@ function Home() {
           justifyContent="space-between"
         >
           <Zoom in={show}>
-            <Grid item sm={8}>
+            <Grid item sm={8} className={classes.bodyText}>
               <Box my={3}>
                 <Typography component="h1" variant="h5" color="initial">
                   Hi, my name is Dinara.
@@ -60,7 +72,7 @@ function Home() {
               <Box my={5}>
                 <Button
                   href="mailto:dinara.idrissova@list.ru"
-                  variant="contained"
+                  variant="outlined"
                   color="secondary"
                 >
                   GET IN TOUCH!
@@ -69,9 +81,16 @@ function Home() {
               </Box>
             </Grid>
           </Zoom>
-          <Grid item>
+          <Grid item className={classes.picture}>
             <Typography variant="body1" color="initial">
-              Avatar
+              <Box my={3} className={classes.imgBox}>
+                <img
+                  src={homePhoto}
+                  alt="Dinara Idrissova"
+                  width={250}
+                  height={350}
+                />
+              </Box>
             </Typography>
           </Grid>
         </Grid>

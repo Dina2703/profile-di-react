@@ -4,10 +4,16 @@ import Social from "./Social";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  container: {
     flexGrow: 1,
   },
-  paper: {
+  grid: {
+    paddingTop: 20,
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: 20,
+    },
+  },
+  copyRight: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
@@ -19,14 +25,19 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      <Container>{children}</Container>
-      <Container maxWidth="md" className={classes.root}>
-        <Grid container spacing={3}>
+      {children}
+      <Container maxWidth="md" className={classes.container}>
+        <Grid container spacing={3} className={classes.grid}>
           <Grid item xs={12} sm={6}>
             <Social direction="row" spacing={1} />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Typography className={classes.paper}>
+            <Typography
+              variant="caption"
+              display="block"
+              gutterBottom
+              className={classes.copyRight}
+            >
               Copyright &copy; Dinara Idrissova
             </Typography>
           </Grid>

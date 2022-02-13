@@ -16,13 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   section: {
     height: "90vh",
-    background: "#f3edf5",
-  },
-  content: {
-    height: "100%",
-  },
-  container: {
-    height: "100%",
+    paddingTop: 150,
   },
 }));
 
@@ -34,13 +28,8 @@ function About() {
   }, []);
   return (
     <Paper className={classes.section}>
-      <Container maxWidth="md" className={classes.container}>
-        <Grid
-          container
-          alignItems="center"
-          className={classes.content}
-          justifyContent="space-between"
-        >
+      <Container maxWidth="md">
+        <Grid container alignItems="center" justifyContent="space-between">
           <Zoom in={show}>
             <Grid item sm={8}>
               <Box my={3}>
@@ -93,7 +82,7 @@ function About() {
                     <Grid item xs={3}>
                       <Button
                         href="mailto:dinara.idrissova@list.ru"
-                        variant="contained"
+                        variant="outlined"
                         color="secondary"
                       >
                         GET IN TOUCH!
