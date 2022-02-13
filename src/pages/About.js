@@ -10,17 +10,13 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Wallpaper from "../assets/aboutWallpaper.jpg";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   section: {
-    height: "130vh",
-    backgroundImage: `url(${Wallpaper})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    height: "90vh",
+    background: "#f3edf5",
   },
   content: {
     height: "100%",

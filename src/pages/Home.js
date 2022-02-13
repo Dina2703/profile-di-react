@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
-import Wallpaper from "../assets/aboutWallpaper.jpg";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -18,9 +17,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "120vh",
     },
-    backgroundImage: `url(${Wallpaper})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    background: "#faedf2",
   },
   content: {
     height: "100%",

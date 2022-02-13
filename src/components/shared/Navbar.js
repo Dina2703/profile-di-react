@@ -21,16 +21,19 @@ import { grey, red } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
+const logo =
+  "https://see.fontimg.com/api/renderfont4/1G8vj/eyJyIjoiZnMiLCJoIjoxNjYsInciOjIwMDAsImZzIjo4MywiZmdjIjoiIzc4NDA4MyIsImJnYyI6IiM0NTNFM0UiLCJ0IjoxfQ/RGluYXJhIElkcmlzc292YQ/snow-puppets-personal-use-medium.png";
+
 const useStyles = makeStyles((theme) => ({
   appbar: {
     paddingTop: 15,
-    height: 100,
+    height: 120,
   },
   navlinks: {
     display: "flex",
     textTransform: "uppercase",
     letterSpacing: "0.08em",
-    fontWeight: 600,
+    fontWeight: 400,
   },
   logo: {
     fontSize: 45,
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 25,
     },
-    fontFamily: "DancingScript",
+
     fontWeight: 700,
     color: red[900],
   },
@@ -107,19 +110,16 @@ function Navbar() {
               <Grid item>
                 <Link href="/" className={classes.logoLink}>
                   <Box>
-                    <Typography
-                      color="textSecondary"
-                      variant="h2"
-                      className={classes.logo}
-                    >
-                      Dinara Idrissova
-                    </Typography>
+                    <a href="/">
+                      <img src={logo} width="370" alt="Dinara Idrissova" />
+                    </a>
+
                     <Box style={{ position: "relative" }}>
                       <Typography
                         color="textPrimary"
                         className={classes.logoPhrase}
                       >
-                        The Web developer with heart
+                        Web developer with heart
                         <FavoriteBorderIcon
                           className={classes.logoPhrase}
                           style={{
