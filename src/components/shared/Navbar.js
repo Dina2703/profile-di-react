@@ -20,6 +20,8 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { grey, red } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { useLocation } from "react-router-dom";
+import clsx from "clsx";
 
 const logo =
   "https://see.fontimg.com/api/renderfont4/1G8vj/eyJyIjoiZnMiLCJoIjoxNjYsInciOjIwMDAsImZzIjo4MywiZmdjIjoiIzc4NDA4MyIsImJnYyI6IiM0NTNFM0UiLCJ0IjoxfQ/RGluYXJhIElkcmlzc292YQ/snow-puppets-personal-use-medium.png";
@@ -42,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 25,
     },
-
     fontWeight: 700,
     color: red[900],
   },
@@ -65,11 +66,15 @@ const useStyles = makeStyles((theme) => ({
       color: grey[500],
     },
   },
+  active: {
+    textDecoration: "underline",
+  },
 }));
 
 function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
     {
@@ -123,9 +128,10 @@ function Navbar() {
                         <FavoriteBorderIcon
                           className={classes.logoPhrase}
                           style={{
-                            color: "#b71c1c",
+                            color: "#681896",
                             marginLeft: 12,
                             position: "absolute",
+                            fontSize: 25,
                           }}
                         />
                       </Typography>
@@ -142,7 +148,12 @@ function Navbar() {
                         underline="none"
                         href={item.path}
                         key={item.text}
-                        className={classes.link}
+                        className={clsx(
+                          classes.link,
+                          location.pathname === item.path
+                            ? classes.active
+                            : null
+                        )}
                       >
                         {item.text}
                       </Link>
