@@ -191,6 +191,9 @@ function Navbar() {
                   variant="button"
                   href={item.path}
                   color="textPrimary"
+                  className={
+                    location.pathname === item.path ? classes.active : null
+                  }
                 >
                   {item.text}
                 </Link>
