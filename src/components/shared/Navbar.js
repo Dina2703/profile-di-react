@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     [theme.breakpoints.down("sm")]: {
-      width: 300,
+      width: 220,
     },
   },
   logoPhrase: {

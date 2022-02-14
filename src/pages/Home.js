@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     background: green[500],
     "&:hover": {
-      background: green[300],
+      background: green[700],
     },
 
-    borderRadius: 50,
+    borderRadius: 10,
     color: "white",
     padding: "5px 20px",
     marginBottom: 25,
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     height: "90vh",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: 130,
+      paddingTop: 50,
       height: "auto",
     },
   },
@@ -44,8 +44,11 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     height: "100%",
-    width: "auto",
+
     paddingTop: 100,
+  },
+  boxMainText: {
+    width: "100%",
   },
   [theme.breakpoints.down("sm")]: {
     picture: {
@@ -55,7 +58,10 @@ const useStyles = makeStyles((theme) => ({
       order: 2,
     },
     imgBox: {
-      marginLeft: 130,
+      marginLeft: 60,
+    },
+    boxMainText: {
+      width: "100%",
     },
   },
 }));
@@ -90,9 +96,10 @@ function Home() {
           justifyContent="space-between"
         >
           <Zoom in={show}>
-            <Grid item sm={8} className={classes.bodyText}>
-              <Box>
+            <Grid item sm={7} xs={12} className={classes.bodyText}>
+              <Box className={classes.boxMainText} marginTop={10}>
                 <Typography variant="body2">
+                  <span style={{ display: "inline-block", width: 20 }} />
                   Hi there! My name is Dina and I’m really excited to welcome
                   you to my website! I build websites and web applications
                   utilizing modern frameworks and design practices tailored to
@@ -100,6 +107,7 @@ function Home() {
                   following this link.
                   <br />
                   <br />
+                  <span style={{ display: "inline-block", width: 20 }} />
                   Nowadays, having a website is not a luxury but a necessity,
                   customers increasingly search for products and services online
                   and if your business is not “on the internet” it practically
@@ -115,13 +123,13 @@ function Home() {
               </Box>
             </Grid>
           </Zoom>
-          <Grid item className={classes.picture}>
-            <Box my={3} className={classes.imgBox}>
+          <Grid item xs={12} sm={4} className={classes.picture}>
+            <Box pb={3} className={classes.imgBox}>
               <img
                 src={homePhoto}
                 alt="Dinara Idrissova"
-                width={250}
-                height={350}
+                width={300}
+                height={400}
               />
             </Box>
           </Grid>
