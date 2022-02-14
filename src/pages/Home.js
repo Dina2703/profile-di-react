@@ -20,12 +20,18 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       background: green[300],
     },
+
     border: 0,
     borderRadius: 15,
     color: "white",
     padding: "5px 20px",
     marginBottom: 15,
     textTransform: "lowercase",
+  },
+  wrapButton: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
   },
   section: {
     height: "90vh",
@@ -49,6 +55,13 @@ const useStyles = makeStyles((theme) => ({
     },
     imgBox: {
       marginLeft: 130,
+    },
+  },
+  bodyTextBox: {
+    marginTop: 100,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 20,
+      textAlign: "center",
     },
   },
 }));
@@ -84,7 +97,7 @@ function Home() {
         >
           <Zoom in={show}>
             <Grid item sm={8} className={classes.bodyText}>
-              <Box my={3}>
+              <Box className={classes.bodyTextBox}>
                 <Typography variant="body2" className={classes.paragraphBody}>
                   Hi there! My name is Dina and I’m really excited to welcome
                   you to my website! I build websites and web applications
@@ -104,7 +117,7 @@ function Home() {
                 </Typography>
               </Box>
 
-              <Box my={5}>
+              <Box my={3} className={classes.wrapButton}>
                 <ButtonEmail />
               </Box>
             </Grid>

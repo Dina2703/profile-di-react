@@ -9,12 +9,14 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     paddingTop: 20,
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: 20,
+  },
+  social: {
+    [theme.breakpoints.down("sm")]: {
+      //social center in 'md'
+      maxWidth: "60%",
     },
   },
   copyRight: {
-    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
@@ -25,10 +27,17 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
+
       {children}
       <Container maxWidth="md" className={classes.container}>
-        <Grid container spacing={3} className={classes.grid}>
-          <Grid item xs={12} sm={6}>
+        <Grid
+          container
+          spacing={3}
+          className={classes.grid}
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid item xs={12} sm={6} className={classes.social}>
             <Social direction="row" spacing={1} />
           </Grid>
           <Grid item xs={12} sm={6}>
