@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
       background: green[300],
     },
 
-    border: 0,
-    borderRadius: 15,
+    borderRadius: 50,
     color: "white",
     padding: "5px 20px",
-    marginBottom: 15,
+    marginBottom: 25,
     textTransform: "lowercase",
   },
   wrapButton: {
@@ -36,15 +35,17 @@ const useStyles = makeStyles((theme) => ({
   section: {
     height: "90vh",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: 150,
+      paddingTop: 130,
       height: "auto",
     },
   },
-  content: {
+  contentContainer: {
     height: "100%",
   },
   container: {
     height: "100%",
+    width: "auto",
+    paddingTop: 100,
   },
   [theme.breakpoints.down("sm")]: {
     picture: {
@@ -55,13 +56,6 @@ const useStyles = makeStyles((theme) => ({
     },
     imgBox: {
       marginLeft: 130,
-    },
-  },
-  bodyTextBox: {
-    marginTop: 100,
-    [theme.breakpoints.down("sm")]: {
-      marginTop: 20,
-      textAlign: "center",
     },
   },
 }));
@@ -92,13 +86,13 @@ function Home() {
         <Grid
           container
           alignItems="center"
-          className={classes.content}
+          className={classes.contentContainer}
           justifyContent="space-between"
         >
           <Zoom in={show}>
             <Grid item sm={8} className={classes.bodyText}>
-              <Box className={classes.bodyTextBox}>
-                <Typography variant="body2" className={classes.paragraphBody}>
+              <Box>
+                <Typography variant="body2">
                   Hi there! My name is Dina and I’m really excited to welcome
                   you to my website! I build websites and web applications
                   utilizing modern frameworks and design practices tailored to
@@ -116,8 +110,7 @@ function Home() {
                   green button below right now!
                 </Typography>
               </Box>
-
-              <Box my={3} className={classes.wrapButton}>
+              <Box className={classes.wrapButton} paddingY={4}>
                 <ButtonEmail />
               </Box>
             </Grid>
