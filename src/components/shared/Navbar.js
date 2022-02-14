@@ -17,7 +17,7 @@ import {
   Box,
 } from "@material-ui/core";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import { grey, red } from "@material-ui/core/colors";
+import { grey } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { useLocation } from "react-router-dom";
@@ -39,14 +39,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
   },
   logo: {
-    fontSize: 45,
-    textTransform: "uppercase",
-    letterSpacing: 2,
     [theme.breakpoints.down("sm")]: {
-      fontSize: 25,
+      width: 300,
     },
-    fontWeight: 700,
-    color: red[900],
   },
   logoPhrase: {
     fontSize: 19,
@@ -58,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     flexGrow: 1,
   },
+
   link: {
     color: grey[800],
     textTransform: "lowercase",
@@ -81,29 +77,28 @@ function Navbar() {
     {
       text: "home",
       path: "/",
+      id: 2,
     },
     {
       text: "about",
       path: "/about",
+      id: 3,
     },
     {
       text: "work",
       path: "/work",
+      id: 4,
     },
     {
       text: "contact",
       path: "/contact",
+      id: 5,
     },
   ];
 
   return (
     <div className={classes.root}>
-      <AppBar
-        position="fixed"
-        elevation={2}
-        color="sticky"
-        className={classes.appbar}
-      >
+      <AppBar position="fixed" elevation={2} className={classes.appbar}>
         <CssBaseline />
         <Container maxWidth="md">
           <Toolbar variant="regular">
@@ -116,9 +111,12 @@ function Navbar() {
               <Grid item>
                 <Link href="/" className={classes.logoLink}>
                   <Box>
-                    <a href="/">
-                      <img src={logo} width="370" alt="Dinara Idrissova" />
-                    </a>
+                    <img
+                      src={logo}
+                      width="370"
+                      alt="Dinara Idrissova"
+                      className={classes.logo}
+                    />
 
                     <Box style={{ position: "relative" }}>
                       <Typography
@@ -162,8 +160,8 @@ function Navbar() {
                   </div>
                 </Hidden>
                 <Hidden mdUp>
-                  <IconButton>
-                    <MenuIcon onClick={() => setOpen(true)} />
+                  <IconButton onClick={() => setOpen(true)}>
+                    <MenuIcon />
                   </IconButton>
                 </Hidden>
               </Grid>
@@ -185,7 +183,7 @@ function Navbar() {
           <Divider />
           <List>
             {menuItems.map((item) => (
-              <ListItem key={item.text}>
+              <ListItem key={item.id}>
                 <Link
                   underline="none"
                   variant="button"

@@ -6,17 +6,25 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Grid, IconButton, Link } from "@material-ui/core";
 
 const socialItems = [
-  { icon: GitHubIcon, url: "https://github.com/Dina2703" },
-  { icon: InstagramIcon, url: "https://www.instagram.com/dinara.idrissova.1" },
-  { icon: FacebookIcon, url: "https://www.facebook.com/dinara.idrissova.1" },
-  { icon: LinkedInIcon, url: "/" },
+  { icon: GitHubIcon, id: 1, url: "https://github.com/Dina2703" },
+  {
+    icon: InstagramIcon,
+    id: 2,
+    url: "https://www.instagram.com/dinara.idrissova.1",
+  },
+  {
+    icon: FacebookIcon,
+    id: 3,
+    url: "https://www.facebook.com/dinara.idrissova.1",
+  },
+  { icon: LinkedInIcon, id: 4, url: "/" },
 ];
 
 function Social({ direction }) {
   return (
     <Grid container direction={direction || "row"} spacing={2}>
       {socialItems.map((item) => (
-        <Grid item key={item.icon}>
+        <Grid item key={item.id}>
           <Link href={item.url}>
             <IconButton>
               <item.icon />

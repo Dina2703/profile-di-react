@@ -123,16 +123,14 @@ function Home() {
             </Grid>
           </Zoom>
           <Grid item className={classes.picture}>
-            <Typography variant="body1" color="initial">
-              <Box my={3} className={classes.imgBox}>
-                <img
-                  src={homePhoto}
-                  alt="Dinara Idrissova"
-                  width={250}
-                  height={350}
-                />
-              </Box>
-            </Typography>
+            <Box my={3} className={classes.imgBox}>
+              <img
+                src={homePhoto}
+                alt="Dinara Idrissova"
+                width={250}
+                height={350}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>

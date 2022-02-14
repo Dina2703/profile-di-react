@@ -48,7 +48,6 @@ function App() {
     <Router>
       <div className="App">
         <ThemeProvider theme={theme}>
-          {" "}
           <Layout>
             <Routes>
               <Route path="/" element={<Home />}></Route>
