@@ -28,13 +28,17 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: ["Poppins", "sans-serif"].join(","),
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
     fontWeightBold: 700,
     h1: {
-      letterSpacing: "0.06em",
+      letterSpacing: "0.1em",
       fontWeight: 700,
+    },
+    body2: {
+      letterSpacing: 0.5,
+      fontFamily: "Georgia",
     },
   },
 });

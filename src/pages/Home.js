@@ -12,8 +12,21 @@ import { makeStyles } from "@material-ui/core/styles";
 import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
 
 import homePhoto from "../assets/myPic2.jpeg";
+import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    background: green[500],
+    "&:hover": {
+      background: green[300],
+    },
+    border: 0,
+    borderRadius: 15,
+    color: "white",
+    padding: "5px 20px",
+    marginBottom: 15,
+    textTransform: "lowercase",
+  },
   section: {
     height: "90vh",
     [theme.breakpoints.down("sm")]: {
@@ -40,8 +53,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const ButtonEmail = () => {
+  const classes = useStyles();
+  return (
+    <Button
+      className={classes.root}
+      href="mailto:dinara.idrissova@list.ru"
+      variant="contained"
+    >
+      Send Me an Email <MailOutlinedIcon style={{ marginLeft: 15 }} />
+    </Button>
+  );
+};
+
 function Home() {
   const classes = useStyles();
+
   const [show, setShow] = useState(false);
   useEffect(() => {
     setShow(true);
@@ -58,27 +85,27 @@ function Home() {
           <Zoom in={show}>
             <Grid item sm={8} className={classes.bodyText}>
               <Box my={3}>
-                <Typography component="h1" variant="h5" color="initial">
-                  Hi, my name is Dinara.
+                <Typography variant="body2" className={classes.paragraphBody}>
+                  Hi there! My name is Dina and I’m really excited to welcome
+                  you to my website! I build websites and web applications
+                  utilizing modern frameworks and design practices tailored to
+                  every particular business. You may check some of my work
+                  following this link.
+                  <br />
+                  <br />
+                  Nowadays, having a website is not a luxury but a necessity,
+                  customers increasingly search for products and services online
+                  and if your business is not “on the internet” it practically
+                  invisible for many of potential customers. I will help you to
+                  build a storefront of your business in the digital space. I’ll
+                  be happy to help you to start or grow your business. Ask me
+                  anything and I’ll try to help you. Let’s get in touch! Hit the
+                  green button below right now!
                 </Typography>
               </Box>
 
-              <Typography variant="subtitle1">
-                I build websites, web applications and responsive user
-                interfaces. Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Tempora doloribus rerum consequatur quaerat ratione sunt
-                at quis soluta ullam mollitia beatae libero est corrupti
-                molestiae nemo modi a, impedit quos.
-              </Typography>
               <Box my={5}>
-                <Button
-                  href="mailto:dinara.idrissova@list.ru"
-                  variant="outlined"
-                  color="secondary"
-                >
-                  GET IN TOUCH!
-                  <MailOutlinedIcon style={{ marginLeft: 10 }} />
-                </Button>
+                <ButtonEmail />
               </Box>
             </Grid>
           </Zoom>
