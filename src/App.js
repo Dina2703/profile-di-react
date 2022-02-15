@@ -21,9 +21,9 @@ const theme = createTheme({
       secondary: "#37474f",
     },
     secondary: {
-      light: "#d6b4e0",
-      main: "#c9aed1",
-      dark: "#9e6aad",
+      light: "#9a67ea",
+      main: "#673ab7",
+      dark: "#320b86",
     },
   },
   typography: {

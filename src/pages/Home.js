@@ -95,7 +95,7 @@ function Home() {
           justifyContent="space-between"
         >
           <Zoom in={show}>
-            <Grid item xs={12} sm={6} md={8} className={classes.bodyText}>
+            <Grid item xs={12} sm={5} md={8} className={classes.bodyText}>
               <Box className={classes.boxMainText} marginTop={10}>
                 <Typography variant="body2">
                   <span style={{ display: "inline-block", width: 20 }} />
@@ -122,7 +122,7 @@ function Home() {
               </Box>
             </Grid>
           </Zoom>
-          <Grid item xs={12} sm={5} md={3} className={classes.picture}>
+          <Grid item xs={12} sm={6} md={3} className={classes.picture}>
             <Box pb={3} className={classes.imgBox}>
               <img
                 src={homePhoto}
