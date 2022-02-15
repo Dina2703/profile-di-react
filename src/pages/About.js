@@ -45,12 +45,6 @@ function About() {
                 modi a, impedit quos.
               </Typography>
 
-              <Box my={3}>
-                <Typography component="h1" variant="h5" color="initial">
-                  Some kinda content
-                </Typography>
-              </Box>
-
               <Typography variant="subtitle1">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Tempora doloribus rerum consequatur quaerat ratione sunt at quis
