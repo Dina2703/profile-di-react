@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles();
   return (
-    <footer>
+    <footer style={{ marginBottom: "40px" }}>
       <Container maxWidth="md" className={classes.container}>
         <Grid
           container
@@ -32,10 +32,10 @@ function Footer() {
           alignItems="center"
           justifyContent="space-around"
         >
-          <Grid item xs={12} smUp={4}>
+          <Grid item sm={6}>
             <Social direction="row" />
           </Grid>
-          <Grid item xs={12} smUp={4}>
+          <Grid item sm={6}>
             <Typography
               variant="caption"
               display="block"
