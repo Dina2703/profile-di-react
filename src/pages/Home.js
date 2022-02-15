@@ -44,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     height: "100%",
-
     paddingTop: 100,
   },
   boxMainText: {

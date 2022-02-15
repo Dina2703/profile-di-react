@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     flexGrow: 1,
   },
-  grid: {
+  gridContainer: {
     paddingTop: 20,
   },
 
@@ -14,24 +14,28 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
+  [theme.breakpoints.down("sm")]: {
+    gridContainer: {
+      paddingTop: 0,
+    },
+  },
 }));
 
 function Footer() {
   const classes = useStyles();
   return (
-    <div>
+    <footer>
       <Container maxWidth="md" className={classes.container}>
         <Grid
           container
-          spacing={3}
-          className={classes.grid}
+          className={classes.gridContainer}
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
         >
-          <Grid item xs={12} sm={6}>
-            <Social direction="row" spacing={1} />
+          <Grid item xs={12} smUp={4}>
+            <Social direction="row" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} smUp={4}>
             <Typography
               variant="caption"
               display="block"
@@ -42,7 +46,7 @@ function Footer() {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </footer>
   );
 }
 
