@@ -73,7 +73,7 @@ const ButtonEmail = () => {
   const classes = useStyles();
   return (
     <Button className={classes.root} href="/contact" variant="contained">
-      Send Me an Email <MailOutlinedIcon style={{ marginLeft: 15 }} />
+      contact me <MailOutlinedIcon style={{ marginLeft: 15 }} />
     </Button>
   );
 };

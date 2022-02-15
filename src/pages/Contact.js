@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       margin: 40,
     },
+    textTransform: "lowercase",
   },
   field: {
     marginTop: 20,
@@ -111,7 +112,7 @@ function Contact() {
             onClick={() => console.log("clicked")}
             endIcon={<SendTwoToneIcon />}
           >
-            Submit
+            send message!
           </Button>
         </form>
       </Container>

@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   active: {
-    textDecoration: "underline",
+    borderBottom: "3px solid #673ab7",
   },
 }));
 
