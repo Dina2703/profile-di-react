@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
     },
   },
+  img: {
+    borderRadius: "3%",
+  },
   section: {
     height: "90vh",
     [theme.breakpoints.down("sm")]: {
@@ -49,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   boxMainText: {
     width: "100%",
   },
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("xs")]: {
     picture: {
       order: 1,
     },
@@ -61,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     },
     boxMainText: {
       width: "100%",
+      marginTop: 0,
     },
   },
 }));
@@ -68,11 +72,7 @@ const useStyles = makeStyles((theme) => ({
 const ButtonEmail = () => {
   const classes = useStyles();
   return (
-    <Button
-      className={classes.root}
-      href="mailto:dinara.idrissova@list.ru"
-      variant="contained"
-    >
+    <Button className={classes.root} href="/contact" variant="contained">
       Send Me an Email <MailOutlinedIcon style={{ marginLeft: 15 }} />
     </Button>
   );
@@ -95,7 +95,7 @@ function Home() {
           justifyContent="space-between"
         >
           <Zoom in={show}>
-            <Grid item sm={7} xs={12} className={classes.bodyText}>
+            <Grid item xs={12} sm={6} md={8} className={classes.bodyText}>
               <Box className={classes.boxMainText} marginTop={10}>
                 <Typography variant="body2">
                   <span style={{ display: "inline-block", width: 20 }} />
@@ -122,13 +122,14 @@ function Home() {
               </Box>
             </Grid>
           </Zoom>
-          <Grid item xs={12} sm={4} className={classes.picture}>
+          <Grid item xs={12} sm={5} md={3} className={classes.picture}>
             <Box pb={3} className={classes.imgBox}>
               <img
                 src={homePhoto}
                 alt="Dinara Idrissova"
                 width={300}
                 height={400}
+                className={classes.img}
               />
             </Box>
           </Grid>
