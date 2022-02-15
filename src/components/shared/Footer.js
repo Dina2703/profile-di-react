@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    paddingBottom: 30,
+    paddingBottom: 10,
     position: "sticky",
     bottom: 0,
     background: "#fcfaf7",
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {},
   gridContainer: {
-    paddingTop: 20,
+    paddingTop: 10,
   },
 
   copyRight: {

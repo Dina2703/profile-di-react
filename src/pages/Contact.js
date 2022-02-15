@@ -1,4 +1,11 @@
-import { Container, TextField, CssBaseline, Button } from "@material-ui/core";
+import {
+  Container,
+  TextField,
+  CssBaseline,
+  Button,
+  Box,
+  Typography,
+} from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 import SendTwoToneIcon from "@material-ui/icons/SendTwoTone";
@@ -32,6 +39,15 @@ function Contact() {
     <>
       <CssBaseline />
       <Container className={classes.formContainer} maxWidth="md">
+        <Box>
+          <Typography variant="h6" color="initial">
+            Say Hey
+          </Typography>
+          <Typography variant="body2" color="initial">
+            Whether you want to work with me or just need some advice, start
+            here.
+          </Typography>
+        </Box>
         <form
           noValidate
           autoComplete="off"
