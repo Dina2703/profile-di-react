@@ -3,9 +3,14 @@ import Social from "./Social";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    flexGrow: 1,
+  footer: {
+    paddingBottom: 30,
+    position: "sticky",
+    bottom: 0,
+    background: "#fcfaf7",
+    width: "100%",
   },
+  container: {},
   gridContainer: {
     paddingTop: 20,
   },
@@ -24,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles();
   return (
-    <footer style={{ marginBottom: "40px" }}>
+    <footer className={classes.footer}>
       <Container maxWidth="md" className={classes.container}>
         <Grid
           container
