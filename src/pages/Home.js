@@ -94,25 +94,23 @@ function Home() {
           justifyContent="space-between"
         >
           <Zoom in={show}>
-            <Grid item xs={12} sm={5} md={8} className={classes.bodyText}>
+            <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
               <Box className={classes.boxMainText} marginTop={10}>
                 <Typography variant="body2">
-                  Hi there! My name is Dinara and I&#39;m really excited to
-                  welcome you to my website! I build websites and web
-                  applications utilizing modern frameworks and design practices
-                  tailored to every particular business. You may check some of
-                  my work following this <a href="/work">link</a> .
-                  <br />
-                  <br />
                   <span style={{ display: "inline-block", width: 20 }} />
+                  Hi there! My name is Dinara and I&#39;m really excited to
+                  welcome you to my website! .
+                  <br />
+                  <br />
                   Nowadays, having a website is not a luxury but a necessity,
                   customers increasingly search for products and services online
                   and if your business is not “on the internet” it practically
                   invisible for many of potential customers. I will help you to
                   build a storefront of your business in the digital space.
                   I&#39;ll be happy to help you to start or grow your business.
-                  Ask me anything and I&#39;ll try to help you. Let&#39;s get in
-                  touch! Hit the green button below right now!
+                  Ask me anything and I&#39;ll try to help you.{" "}
+                  <span style={{ display: "block", width: 20 }} />
+                  Let&#39;s get in touch! Hit the green button below right now!
                 </Typography>
               </Box>
               <Box className={classes.wrapButton} paddingY={4}>
@@ -120,13 +118,13 @@ function Home() {
               </Box>
             </Grid>
           </Zoom>
-          <Grid item xs={12} sm={6} md={3} className={classes.picture}>
+          <Grid item xs={12} sm={6} md={5} className={classes.picture}>
             <Box pb={3} className={classes.imgBox}>
               <img
-                src="/assets/myPic2.jpeg"
+                src="/assets/home.jpg"
                 alt="Dinara Idrissova"
-                width={300}
-                height={400}
+                width={400}
+                height={300}
                 className={classes.img}
               />
             </Box>
