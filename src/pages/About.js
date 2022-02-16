@@ -4,12 +4,10 @@ import {
   Typography,
   Grid,
   Container,
-  Button,
   Box,
   Zoom,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
 
 import { green } from "@material-ui/core/colors";
 
@@ -33,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     borderRadius: "3%",
+    marginTop: 50,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+    },
   },
   section: {
     height: "90vh",
@@ -68,15 +70,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ButtonEmail = () => {
-  const classes = useStyles();
-  return (
-    <Button className={classes.root} href="/contact" variant="contained">
-      contact me <MailOutlinedIcon style={{ marginLeft: 15 }} />
-    </Button>
-  );
-};
-
 function Home() {
   const classes = useStyles();
 
@@ -96,13 +89,21 @@ function Home() {
           <Zoom in={show}>
             <Grid item xs={12} sm={5} md={8} className={classes.bodyText}>
               <Box className={classes.boxMainText} marginTop={10}>
-                <Typography variant="body2">
-                  Hi there! My name is Dinara and I&#39;m really excited to
-                  welcome you to my website! I build websites and web
-                  applications utilizing modern frameworks and design practices
-                  tailored to every particular business. You may check some of
-                  my work following this <a href="/work">link</a> .
-                  <br />
+                <Typography variant="subtitle2" gutterBottom align="justify">
+                  “Learning to write programs stretches your mind, and helps you
+                  think better, creates a way of thinking about things that I
+                  think is helpful in all domains.”
+                </Typography>
+                <Typography variant="body2" align="right">
+                  -- Bill Gates
+                </Typography>
+                <br />
+
+                <Typography variant="body2" align="justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus sapiente, ut sint doloremque rerum amet aperiam
+                  blanditiis magni. Voluptatem inventore iusto sit architecto
+                  non dolorem vitae consequatur, ut tempore nesciunt.
                   <br />
                   <span style={{ display: "inline-block", width: 20 }} />
                   Nowadays, having a website is not a luxury but a necessity,
@@ -114,9 +115,6 @@ function Home() {
                   Ask me anything and I&#39;ll try to help you. Let&#39;s get in
                   touch! Hit the green button below right now!
                 </Typography>
-              </Box>
-              <Box className={classes.wrapButton} paddingY={4}>
-                <ButtonEmail />
               </Box>
             </Grid>
           </Zoom>

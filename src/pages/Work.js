@@ -66,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 350,
     marginBottom: 30,
     border: "15px solid  #e8eaf6",
+    transition: "transform 0.15s ease-in-out",
   },
   media: {
     height: 200,

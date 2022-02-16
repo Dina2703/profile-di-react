@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     height: "100%",
-    paddingTop: 100,
+    paddingTop: 150,
   },
   boxMainText: {
     maxWidth: "30rem",
@@ -96,12 +96,15 @@ function Home() {
           <Zoom in={show}>
             <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
               <Box className={classes.boxMainText} marginTop={10}>
-                <Typography variant="body2">
+                <Typography variant="body2" align="justify">
                   <span style={{ display: "inline-block", width: 20 }} />
                   Hi there! My name is Dinara and I&#39;m really excited to
-                  welcome you to my website! .
+                  welcome you to my website! I build websites and web
+                  applications utilizing modern frameworks and design practices
+                  tailored to every particular business. You may check some of
+                  my work following this <a href="/work">link</a>.
                   <br />
-                  <br />
+                  <span style={{ display: "inline-block", width: 20 }} />
                   Nowadays, having a website is not a luxury but a necessity,
                   customers increasingly search for products and services online
                   and if your business is not “on the internet” it practically
