@@ -8,7 +8,6 @@ import {
   Grid,
   IconButton,
   CardHeader,
-  Avatar,
 } from "@material-ui/core";
 import { useEffect, useState } from "react";
 
@@ -66,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
     border: "15px solid  #e8eaf6",
     borderBottom: "none",
+    position: "relative",
   },
   media: {
     height: 200,
@@ -124,17 +124,17 @@ function Work() {
 
                   <CardHeader
                     style={{ background: "#e8eaf6" }}
-                    avatar={
-                      <Avatar
-                        aria-label="project type"
-                        className={classes.avatar}
-                      >
-                        {item.type[0].toUpperCase()}
-                      </Avatar>
-                    }
                     subheader={item.title}
                     action={
-                      <IconButton aria-label="go to template website">
+                      <IconButton
+                        aria-label="go to the template website"
+                        style={{
+                          position: "absolute",
+                          right: 10,
+                          bottom: 20,
+                          padding: 0,
+                        }}
+                      >
                         <a
                           href={item.url}
                           target="_blank"
