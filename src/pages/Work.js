@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 350,
     marginBottom: 30,
     border: "15px solid  #e8eaf6",
+    borderBottom: "none",
   },
   media: {
     height: 200,
@@ -82,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   avatar: {
-    background: "#9262FF",
+    background: "#66bb6a",
   },
 }));
 
@@ -138,7 +139,7 @@ function Work() {
                           href={item.url}
                           target="_blank"
                           rel="noreferrer"
-                          style={{ color: "#9262FF" }}
+                          style={{ color: "#388e3c" }}
                         >
                           <ChevronRightIcon />
                         </a>
