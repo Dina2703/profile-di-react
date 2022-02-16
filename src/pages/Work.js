@@ -7,6 +7,7 @@ import {
   Typography,
   Container,
   Grid,
+  Link,
 } from "@material-ui/core";
 
 const itemData = [
@@ -16,6 +17,7 @@ const itemData = [
     type: "template",
     cols: 2,
     id: 1,
+    url: "https://audio-books-next.vercel.app/",
   },
   {
     img: "/assets/nucamp-site.png",
@@ -23,6 +25,7 @@ const itemData = [
     type: "template",
     cols: 2,
     id: 2,
+    url: "https://nucamp-website-01.netlify.app/",
   },
   {
     img: "/assets/dom-coffee.png",
@@ -30,6 +33,7 @@ const itemData = [
     type: "template",
     cols: 2,
     id: 3,
+    url: "https://coffee-shop-dom.netlify.app/",
   },
   {
     img: "/assets/memory-game.png",
@@ -37,6 +41,7 @@ const itemData = [
     type: "game",
     cols: 2,
     id: 4,
+    url: "https://memory-game-dina.netlify.app/",
   },
 ];
 
@@ -48,9 +53,10 @@ const useStyles = makeStyles((theme) => ({
   typo: {
     textAlign: "center",
     fontSize: 24,
+    marginBottom: 30,
   },
   root: {
-    maxWidth: 300,
+    maxWidth: 350,
     marginBottom: 30,
     border: "15px solid  #e8eaf6",
   },
@@ -60,6 +66,14 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     background: "#e8eaf6",
+    paddingTop: 10,
+    padding: 0,
+  },
+  workTitle: {
+    fontSize: 15,
+  },
+  workType: {
+    fontSize: 13,
   },
 }));
 
@@ -69,7 +83,7 @@ function Work() {
     <div className={classes.div}>
       <Container maxWidth="md" className={classes.container}>
         <Typography
-          variant="subtitle1"
+          variant="subtitle2"
           color="initial"
           className={classes.typo}
         >
@@ -78,23 +92,35 @@ function Work() {
         <Grid container>
           {itemData.map((item) => (
             <Grid item xs={10} sm={6} key={item.id}>
-              <Card className={classes.root}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={item.img}
-                    title={item.title}
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography variant="body2" component="p" color="initial">
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" component="p" color="initial">
-                      {item.type}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+              <Link href={item.url} target="_blank" rel="noreferrer">
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image={item.img}
+                      title={item.title}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        variant="subtitle1"
+                        component="p"
+                        color="initial"
+                        className={classes.workTitle}
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        component="p"
+                        color="initial"
+                        className={classes.workType}
+                      >
+                        {item.type}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
             </Grid>
           ))}
         </Grid>
