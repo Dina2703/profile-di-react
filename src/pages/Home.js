@@ -11,7 +11,6 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
 
-import homePhoto from "../assets/myPic2.jpeg";
 import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
@@ -125,7 +124,7 @@ function Home() {
           <Grid item xs={12} sm={6} md={3} className={classes.picture}>
             <Box pb={3} className={classes.imgBox}>
               <img
-                src={homePhoto}
+                src="/assets/myPic2.jpeg"
                 alt="Dinara Idrissova"
                 width={300}
                 height={400}
