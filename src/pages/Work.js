@@ -9,6 +9,7 @@ import {
   Grid,
   Link,
 } from "@material-ui/core";
+import { useEffect, useState } from "react";
 
 const itemData = [
   {
@@ -47,7 +48,7 @@ const itemData = [
 
 const useStyles = makeStyles((theme) => ({
   div: {
-    height: "90vh",
+    height: "auto",
     marginTop: 150,
     [theme.breakpoints.down("sm")]: {
       height: "auto",
@@ -57,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: 24,
     marginBottom: 30,
+    textTransform: "uppercase",
+    fontFamily: "Times New Roman",
+    fontWeight: "bold",
   },
   root: {
     maxWidth: 350,
@@ -87,6 +91,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Work() {
   const classes = useStyles();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(itemData);
+  }, []);
+
   return (
     <div className={classes.div}>
       <Container maxWidth="md" className={classes.container}>
@@ -95,10 +105,10 @@ function Work() {
           color="initial"
           className={classes.typo}
         >
-          Some of my projects
+          Some of my works
         </Typography>
         <Grid container>
-          {itemData.map((item) => (
+          {data.map((item) => (
             <Grid
               item
               xs={10}
