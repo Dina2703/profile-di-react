@@ -2,14 +2,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardActionArea,
-  CardContent,
   CardMedia,
   Typography,
   Container,
   Grid,
-  Link,
+  IconButton,
+  CardHeader,
+  Avatar,
 } from "@material-ui/core";
 import { useEffect, useState } from "react";
+
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const itemData = [
   {
@@ -54,19 +57,14 @@ const useStyles = makeStyles((theme) => ({
       height: "auto",
     },
   },
-  typo: {
-    textAlign: "center",
-    fontSize: 24,
-    marginBottom: 30,
-    textTransform: "uppercase",
+  cardheader: {
+    fontSize: 4,
     fontFamily: "Times New Roman",
-    fontWeight: "bold",
   },
   root: {
     maxWidth: 350,
     marginBottom: 30,
     border: "15px solid  #e8eaf6",
-    transition: "transform 0.15s ease-in-out",
   },
   media: {
     height: 200,
@@ -77,16 +75,14 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 10,
     padding: 0,
   },
-  workTitle: {
-    fontSize: 15,
-  },
-  workType: {
-    fontSize: 13,
-  },
+
   gridItem: {
     [theme.breakpoints.down("xs")]: {
       marginLeft: 50,
     },
+  },
+  avatar: {
+    background: "#9262FF",
   },
 }));
 
@@ -117,35 +113,40 @@ function Work() {
               key={item.id}
               className={classes.gridItem}
             >
-              <Link href={item.url} target="_blank" rel="noreferrer">
-                <Card className={classes.root}>
-                  <CardActionArea>
-                    <CardMedia
-                      className={classes.media}
-                      image={item.img}
-                      title={item.title}
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography
-                        variant="subtitle1"
-                        component="p"
-                        color="initial"
-                        className={classes.workTitle}
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={item.img}
+                    title={item.title}
+                  />
+
+                  <CardHeader
+                    style={{ background: "#e8eaf6" }}
+                    avatar={
+                      <Avatar
+                        aria-label="project type"
+                        className={classes.avatar}
                       >
-                        {item.title}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        component="p"
-                        color="initial"
-                        className={classes.workType}
-                      >
-                        {item.type}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Link>
+                        {item.type[0].toUpperCase()}
+                      </Avatar>
+                    }
+                    subheader={item.title}
+                    action={
+                      <IconButton aria-label="go to template website">
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{ color: "#9262FF" }}
+                        >
+                          <ChevronRightIcon />
+                        </a>
+                      </IconButton>
+                    }
+                  />
+                </CardActionArea>
+              </Card>
             </Grid>
           ))}
         </Grid>
