@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
   div: {
     height: "90vh",
     marginTop: 150,
+    [theme.breakpoints.down("sm")]: {
+      height: "auto",
+    },
   },
   typo: {
     textAlign: "center",
@@ -75,6 +78,11 @@ const useStyles = makeStyles((theme) => ({
   workType: {
     fontSize: 13,
   },
+  gridItem: {
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 50,
+    },
+  },
 }));
 
 function Work() {
@@ -91,7 +99,13 @@ function Work() {
         </Typography>
         <Grid container>
           {itemData.map((item) => (
-            <Grid item xs={10} sm={6} key={item.id}>
+            <Grid
+              item
+              xs={10}
+              sm={6}
+              key={item.id}
+              className={classes.gridItem}
+            >
               <Link href={item.url} target="_blank" rel="noreferrer">
                 <Card className={classes.root}>
                   <CardActionArea>

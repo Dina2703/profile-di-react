@@ -12,7 +12,7 @@ import SendTwoToneIcon from "@material-ui/icons/SendTwoTone";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
-    height: "90vh",
+    height: "100vh",
     paddingTop: 150,
   },
   btn: {
@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
   field: {
     marginTop: 20,
-
     display: "block",
     width: "70%",
     [theme.breakpoints.down("xs")]: {
@@ -52,7 +51,6 @@ function Contact() {
         <form
           noValidate
           autoComplete="off"
-          className={classes.root}
           action="https://formsubmit.co/dinara.idrissova@list.ru"
           method="POST"
         >

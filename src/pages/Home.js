@@ -98,11 +98,11 @@ function Home() {
               <Box className={classes.boxMainText} marginTop={10}>
                 <Typography variant="body2">
                   <span style={{ display: "inline-block", width: 20 }} />
-                  Hi there! My name is Dina and I’m really excited to welcome
+                  Hi there! My name is Dinara and I’m really excited to welcome
                   you to my website! I build websites and web applications
                   utilizing modern frameworks and design practices tailored to
                   every particular business. You may check some of my work
-                  following this link.
+                  following this <a href="/work">link</a> .
                   <br />
                   <br />
                   <span style={{ display: "inline-block", width: 20 }} />
