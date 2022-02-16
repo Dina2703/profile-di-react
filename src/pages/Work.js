@@ -12,6 +12,7 @@ import {
 import { useEffect, useState } from "react";
 
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { Helmet } from "react-helmet";
 
 const itemData = [
   {
@@ -97,6 +98,9 @@ function Work() {
 
   return (
     <div className={classes.div}>
+      <Helmet>
+        <title>Dinara Idrissova || Works</title>
+      </Helmet>
       <Container maxWidth="md" className={classes.container}>
         <Typography
           variant="subtitle2"

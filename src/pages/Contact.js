@@ -10,6 +10,7 @@ import { green } from "@material-ui/core/colors";
 
 import { makeStyles } from "@material-ui/core/styles";
 import SendTwoToneIcon from "@material-ui/icons/SendTwoTone";
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -43,6 +44,9 @@ function Contact() {
   const classes = useStyles();
   return (
     <>
+      <Helmet>
+        <title>Dinara Idrissova || Contact</title>
+      </Helmet>
       <CssBaseline />
       <Container className={classes.formContainer} maxWidth="md">
         <Box>
