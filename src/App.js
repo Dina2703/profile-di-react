@@ -5,7 +5,7 @@ import Work from "./pages/Work";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import Layout from "./components/shared/Layout";
-import { createTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import "./App.css";
 import { Helmet } from "react-helmet";
@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     text: {
       primary: "#616161",
-      secondary: "#37474f",
+      secondary: "#388e3c",
     },
     secondary: {
       light: "#9a67ea",
@@ -61,6 +61,7 @@ function App() {
           />
         </Helmet>
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />}></Route>

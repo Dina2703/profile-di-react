@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
 
   copyRight: {
     textAlign: "center",
-    color: theme.palette.text.secondary,
   },
   [theme.breakpoints.down("sm")]: {
     gridContainer: {
@@ -45,6 +44,7 @@ function Footer() {
               variant="caption"
               display="block"
               className={classes.copyRight}
+              color="textPrimary"
             >
               Copyright &copy; Dinara Idrissova
             </Typography>
