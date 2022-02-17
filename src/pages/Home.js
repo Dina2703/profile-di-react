@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
     },
+    marginTop: 20,
   },
   img: {
     boxShadow: "5px 5px 2px gray",
@@ -47,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     height: "100%",
-    paddingTop: 150,
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: 130,
+    },
   },
   boxMainText: {
     maxWidth: "30rem",
@@ -59,9 +62,7 @@ const useStyles = makeStyles((theme) => ({
     bodyText: {
       order: 2,
     },
-    imgBox: {
-      marginLeft: "2.7em",
-    },
+
     boxMainText: {
       width: "100%",
       marginTop: 0,
@@ -97,36 +98,43 @@ function Home() {
           >
             <Zoom in={show}>
               <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
-                <Box className={classes.boxMainText} marginTop={10}>
-                  <Typography variant="body2" align="justify">
+                <Box className={classes.boxMainText} marginTop={15}>
+                  <Typography
+                    variant="body1"
+                    style={{ fontWeight: 400, fontSize: 15 }}
+                    align="justify"
+                  >
                     <span style={{ display: "inline-block", width: 20 }} />
-                    Hi there! My name is Dinara and I&#39;m really excited to
-                    welcome you to my website! I build websites and web
-                    applications utilizing modern frameworks and design
-                    practices tailored to every particular business. You may
-                    check some of my work following this{" "}
-                    <a href="/work">link</a>.
+                    Hi there! I&#39;m Dinara and welcome to my website!
                     <br />
-                    <span style={{ display: "inline-block", width: 20 }} />
                     Nowadays, having a website is not a luxury but a necessity,
                     customers increasingly search for products and services
                     online and if your business is not “on the internet” it
                     practically invisible for many of potential customers. I
                     will help you to build a storefront of your business in the
                     digital space. I&#39;ll be happy to help you to start or
-                    grow your business. Ask me anything and I&#39;ll try to help
-                    you. <span style={{ display: "block", width: 20 }} />
-                    Let&#39;s get in touch! Hit the green button below right
-                    now!
+                    grow your business.You may check some of my work following
+                    this <a href="/work">link</a>. Ask me anything and I&#39;ll
+                    try to help you.
+                    <span style={{ display: "block", width: 20 }} />
+                    Let&#39;s get in touch!
                   </Typography>
                 </Box>
-                <Box className={classes.wrapButton} paddingY={4}>
+                <Box className={classes.wrapButton}>
                   <ButtonEmail />
                 </Box>
               </Grid>
             </Zoom>
             <Grid item xs={12} sm={6} md={5} className={classes.picture}>
-              <Box pb={3} className={classes.imgBox}>
+              <Box pb={3}>
+                <Typography
+                  variant="body1"
+                  align="center"
+                  gutterBottom
+                  style={{ textShadow: "1px 1px  gray" }}
+                >
+                  Grow your business with a website
+                </Typography>
                 <img
                   src="/assets/exapmle3.jpg"
                   alt="Grow your business with a website"
@@ -134,12 +142,6 @@ function Home() {
                   height={270}
                   className={classes.img}
                 />
-                <Typography
-                  variant="overline"
-                  style={{ marginLeft: 50, textShadow: ".8px .5px  gray" }}
-                >
-                  Grow your business with a website
-                </Typography>
               </Box>
             </Grid>
           </Grid>
