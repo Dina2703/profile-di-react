@@ -71,17 +71,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const img = "/assets/myPic2.jpeg";
+
 function Home() {
   const classes = useStyles();
-
+  const [image, setImage] = useState(null);
   const [show, setShow] = useState(false);
   useEffect(() => {
     setShow(true);
+    setImage(img);
   }, []);
   return (
     <>
       <Helmet>
-        <title>Dinara Idrissova || Works</title>
+        <title>Dinara Idrissova || About</title>
       </Helmet>
       <Paper className={classes.section}>
         <Container maxWidth="md" className={classes.container}>
@@ -127,7 +130,7 @@ function Home() {
             <Grid item xs={12} sm={6} md={3} className={classes.picture}>
               <Box pb={3} className={classes.imgBox}>
                 <img
-                  src="/assets/myPic2.jpeg"
+                  src={image}
                   alt="Dinara Idrissova"
                   width={300}
                   height={400}

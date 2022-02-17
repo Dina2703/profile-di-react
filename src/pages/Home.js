@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   img: {
-    borderRadius: "3%",
+    boxShadow: "5px 5px 2px gray",
   },
 
   section: {
@@ -129,13 +129,16 @@ function Home() {
               <Box pb={3} className={classes.imgBox}>
                 <img
                   src="/assets/exapmle3.jpg"
-                  alt="Dinara Idrissova"
-                  width={400}
-                  height={300}
+                  alt="Grow your business with a website"
+                  width={450}
+                  height={270}
                   className={classes.img}
                 />
-                <Typography variant="body2" align="center">
-                  Grow your business with website
+                <Typography
+                  variant="overline"
+                  style={{ marginLeft: 50, textShadow: ".8px .5px  gray" }}
+                >
+                  Grow your business with a website
                 </Typography>
               </Box>
             </Grid>
