@@ -51,16 +51,18 @@ const itemData = [
 
 const useStyles = makeStyles((theme) => ({
   div: {
-    height: "auto",
     marginTop: 150,
-    [theme.breakpoints.down("sm")]: {
-      height: "auto",
+    height: "80vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "100%",
     },
   },
+
   cardheader: {
     fontSize: 4,
     fontFamily: "Times New Roman",
   },
+
   root: {
     maxWidth: 350,
     marginBottom: 30,
@@ -101,11 +103,12 @@ function Work() {
       <Helmet>
         <title>Dinara Idrissova || Works</title>
       </Helmet>
-      <Container maxWidth="md" className={classes.container}>
+      <Container maxWidth="md">
         <Typography
-          variant="subtitle2"
+          variant="h5"
           color="initial"
-          className={classes.typo}
+          align="center"
+          style={{ marginBottom: 20 }}
         >
           Some of my works
         </Typography>

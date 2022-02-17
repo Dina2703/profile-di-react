@@ -39,18 +39,19 @@ const useStyles = makeStyles((theme) => ({
   },
 
   section: {
-    height: "90vh",
+    height: "100%",
     [theme.breakpoints.down("sm")]: {
       paddingTop: 50,
       height: "auto",
     },
   },
   contentContainer: {
-    height: "100%",
+    height: "auto",
   },
   container: {
-    height: "100%",
+    height: "auto",
     paddingTop: 100,
+    paddingBottom: 50,
   },
   boxMainText: {
     maxWidth: "30rem",
