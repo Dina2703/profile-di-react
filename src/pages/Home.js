@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   img: {
     borderRadius: "3%",
   },
+
   section: {
     height: "90vh",
     [theme.breakpoints.down("sm")]: {
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
       order: 2,
     },
     imgBox: {
-      marginLeft: 60,
+      marginLeft: "2.7em",
     },
     boxMainText: {
       width: "100%",
@@ -127,12 +128,15 @@ function Home() {
             <Grid item xs={12} sm={6} md={5} className={classes.picture}>
               <Box pb={3} className={classes.imgBox}>
                 <img
-                  src="/assets/home.jpg"
+                  src="/assets/exapmle3.jpg"
                   alt="Dinara Idrissova"
                   width={400}
                   height={300}
                   className={classes.img}
                 />
+                <Typography variant="body2" align="center">
+                  Grow your business with website
+                </Typography>
               </Box>
             </Grid>
           </Grid>
