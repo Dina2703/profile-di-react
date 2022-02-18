@@ -145,6 +145,7 @@ function Navbar() {
                     {menuItems.map((item) => (
                       <Link
                         underline="none"
+                        variant="button"
                         href={item.path}
                         key={item.text}
                         className={clsx(
