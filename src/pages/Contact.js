@@ -6,7 +6,6 @@ import {
   Box,
   Typography,
 } from "@material-ui/core";
-import { green } from "@material-ui/core/colors";
 
 import { makeStyles } from "@material-ui/core/styles";
 import SendTwoToneIcon from "@material-ui/icons/SendTwoTone";
@@ -19,10 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: 20,
-    background: green[500],
-    "&:hover": {
-      background: green[700],
-    },
     color: "white",
     [theme.breakpoints.down("xs")]: {
       margin: 40,
@@ -116,6 +111,7 @@ function Contact() {
             className={classes.btn}
             type="submit"
             variant="contained"
+            color="secondary"
             onClick={() => console.log("clicked")}
             endIcon={<SendTwoToneIcon />}
           >

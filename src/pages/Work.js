@@ -146,7 +146,7 @@ function Work() {
                           href={item.url}
                           target="_blank"
                           rel="noreferrer"
-                          style={{ color: "#388e3c" }}
+                          style={{ color: "#320b86" }}
                         >
                           <ChevronRightIcon />
                         </a>

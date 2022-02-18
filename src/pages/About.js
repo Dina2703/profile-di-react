@@ -33,8 +33,11 @@ const useStyles = makeStyles((theme) => ({
   img: {
     borderRadius: "3%",
     marginTop: 50,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginTop: 0,
+      width: 200,
+      height: 300,
+      marginLeft: 50,
     },
   },
 
@@ -70,6 +73,17 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       marginTop: 0,
     },
+    typoTitle: {
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 20,
+        textAlign: "center",
+      },
+    },
+    typoPara: {
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 13,
+      },
+    },
   },
 }));
 
@@ -99,12 +113,21 @@ function Home() {
             <Zoom in={show}>
               <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
                 <Box className={classes.boxMainText} marginTop={10}>
-                  <Typography variant="h6" gutterBottom align="justify">
+                  <Typography
+                    variant="h6"
+                    gutterBottom
+                    align="justify"
+                    className={classes.typoTitle}
+                  >
                     A few words about me
                   </Typography>
                   <br />
 
-                  <Typography variant="body2" align="justify">
+                  <Typography
+                    variant="body2"
+                    align="justify"
+                    className={classes.typoPara}
+                  >
                     <span style={{ display: "inline-block", width: 20 }} />
                     My name is Dinara based in Georgia, US. I&#39;m originally
                     from Kazakhstan. I have more than ten years of experience in
