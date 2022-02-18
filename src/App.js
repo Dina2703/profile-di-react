@@ -39,7 +39,7 @@ const theme = createTheme({
     },
     body2: {
       letterSpacing: 0.5,
-      fontFamily: "Georgia",
+      fontFamily: "Poppins",
       fontSize: 16,
     },
   },

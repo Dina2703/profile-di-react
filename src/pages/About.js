@@ -141,14 +141,16 @@ function Home() {
             </Grid>
             <Zoom in={show}>
               <Grid item sm={10}>
-                <Typography variant="subtitle2" gutterBottom align="center">
-                  “Learning to write programs stretches your mind, and helps you
-                  think better, creates a way of thinking about things that I
-                  think is helpful in all domains.”
-                </Typography>
-                <Typography variant="body2" align="right">
-                  -- Bill Gates
-                </Typography>
+                <Box my={3}>
+                  <Typography variant="subtitle2" gutterBottom align="center">
+                    “Learning to write programs stretches your mind, and helps
+                    you think better, creates a way of thinking about things
+                    that I think is helpful in all domains.”
+                  </Typography>
+                  <Typography variant="body2" align="right">
+                    -- Bill Gates
+                  </Typography>
+                </Box>
               </Grid>
             </Zoom>
           </Grid>

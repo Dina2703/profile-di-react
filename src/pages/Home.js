@@ -1,154 +1,124 @@
-import { useState, useEffect } from "react";
 import {
+  Container,
+  Grid,
   Paper,
   Typography,
-  Grid,
-  Container,
   Button,
   Box,
-  Zoom,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MailOutlinedIcon from "@material-ui/icons/MailOutlined";
-
-import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    background: green[500],
-    "&:hover": {
-      background: green[700],
-    },
-
-    borderRadius: 10,
-    color: "white",
-    padding: "5px 20px",
-    marginBottom: 25,
-    textTransform: "lowercase",
-  },
-  wrapButton: {
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-    },
-    marginTop: 20,
-  },
-  img: {
-    boxShadow: "5px 5px 2px gray",
-  },
-
   section: {
-    height: "90vh",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: 50,
-      height: "auto",
-    },
-  },
-  contentContainer: {
-    height: "100%",
+    marginTop: 100,
+    height: "100vh",
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    color: "#fff",
   },
   container: {
     height: "100%",
+  },
+  content: {
+    height: "100%",
     [theme.breakpoints.down("sm")]: {
-      paddingTop: 130,
+      padding: 20,
     },
   },
-  boxMainText: {
-    maxWidth: "30rem",
+  overlay: {
+    backgroundColor: "rgba(0,0,0,0.7)",
+    height: "100%",
+    width: "100%",
+    position: "absolute",
   },
-  [theme.breakpoints.down("xs")]: {
-    picture: {
-      order: 1,
+  typo: {
+    fontWeight: 500,
+    fontSize: 22,
+    fontFamily: ["Nunito", "sans-serif"].join(","),
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
     },
-    bodyText: {
-      order: 2,
+  },
+  overlayTitle: {
+    backgroundColor: "rgba(255,255,255, 0.2)",
+  },
+  typoTitle: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 19,
     },
-
-    boxMainText: {
-      width: "100%",
-      marginTop: 0,
+  },
+  button: {
+    [theme.breakpoints.down("sm")]: {
+      width: 120,
+      height: 40,
+      fontSize: 12,
     },
   },
 }));
 
-const ButtonEmail = () => {
-  const classes = useStyles();
-  return (
-    <Button className={classes.root} href="/contact" variant="contained">
-      contact me <MailOutlinedIcon style={{ marginLeft: 15 }} />
-    </Button>
-  );
-};
-
-function Home() {
+function Blogs() {
   const classes = useStyles();
 
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    setShow(true);
-  }, []);
   return (
-    <div>
-      <Paper className={classes.section}>
+    <Paper className={classes.section}>
+      <div className={classes.overlay}>
         <Container maxWidth="md" className={classes.container}>
-          <Grid
-            container
-            alignItems="center"
-            className={classes.contentContainer}
-            justifyContent="space-between"
-          >
-            <Zoom in={show}>
-              <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
-                <Box className={classes.boxMainText} marginTop={15}>
-                  <Typography
-                    variant="body1"
-                    style={{ fontWeight: 400, fontSize: 15 }}
-                    align="justify"
-                  >
-                    <span style={{ display: "inline-block", width: 20 }} />
-                    Hi there! I&#39;m Dinara and welcome to my website!
-                    <br />
-                    Nowadays, having a website is not a luxury but a necessity,
-                    customers increasingly search for products and services
-                    online and if your business is not “on the internet” it
-                    practically invisible for many of potential customers. I
-                    will help you to build a storefront of your business in the
-                    digital space. I&#39;ll be happy to help you to start or
-                    grow your business.You may check some of my work following
-                    this <a href="/work">link</a>. Ask me anything and I&#39;ll
-                    try to help you.
-                    <span style={{ display: "block", width: 20 }} />
-                    Let&#39;s get in touch!
-                  </Typography>
-                </Box>
-                <Box className={classes.wrapButton}>
-                  <ButtonEmail />
-                </Box>
-              </Grid>
-            </Zoom>
-            <Grid item xs={12} sm={6} md={5} className={classes.picture}>
-              <Box pb={3}>
+          <Grid container alignItems="center" className={classes.content}>
+            <Grid item>
+              <div>
                 <Typography
-                  variant="body1"
+                  variant="h5"
+                  component="h1"
                   align="center"
-                  gutterBottom
-                  style={{ textShadow: "1px 1px  gray" }}
+                  className={classes.typoTitle}
                 >
-                  Grow your business with a website
+                  Hi there! I&#39;m Dinara and welcome to my website!
                 </Typography>
-                <img
-                  src="/assets/exapmle3.jpg"
-                  alt="Grow your business with a website"
-                  width={450}
-                  height={270}
-                  className={classes.img}
-                />
+              </div>
+              <br />
+              <br />
+              <Typography variant="h6" className={classes.typo} align="justify">
+                <span style={{ display: "inline-block", width: 40 }} />
+                Nowadays, having a website is not a luxury but a necessity,
+                customers increasingly search for products and services online
+                and if your business is not “on the internet” it practically
+                invisible for many of potential customers.
+                <br />
+                <span style={{ display: "inline-block", width: 40 }} />I will
+                help you to build a storefront of your business in the digital
+                space. I&#39;ll be happy to help you to start or grow your
+                business.You may check some of my work following this
+                <a
+                  href="/work"
+                  style={{
+                    color: "white",
+                    padding: "3px",
+                  }}
+                >
+                  link
+                </a>
+                . Ask me anything and I&#39;ll try to help you.
+                <span style={{ display: "block", width: 20 }} />
+                Let&#39;s get in touch!
+              </Typography>
+              <Box my={2} mb={16} py={5}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href="/contact"
+                  className={classes.button}
+                >
+                  contact me
+                </Button>
               </Box>
             </Grid>
           </Grid>
         </Container>
-      </Paper>
-    </div>
+      </div>
+    </Paper>
   );
 }
 
-export default Home;
+export default Blogs;

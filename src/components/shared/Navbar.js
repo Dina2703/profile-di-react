@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   logoPhrase: {
-    fontSize: 19,
+    fontSize: 17,
     [theme.breakpoints.down("sm")]: {
       fontSize: 15,
     },
