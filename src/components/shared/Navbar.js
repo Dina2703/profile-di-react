@@ -20,7 +20,7 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { grey } from "@material-ui/core/colors";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
 const logo =
@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
   },
   navlinks: {
     display: "flex",
-    textTransform: "uppercase",
     letterSpacing: "0.08em",
     fontWeight: 400,
   },
@@ -58,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     color: grey[800],
     textTransform: "lowercase",
     fontSize: 18,
-    marginLeft: theme.spacing(3),
+
     "&:hover": {
       color: grey[500],
     },
@@ -72,6 +71,7 @@ function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const naviate = useNavigate();
 
   const menuItems = [
     {
@@ -105,7 +105,7 @@ function Navbar() {
             <Grid
               container
               justifyContent="space-between"
-              spacing={4}
+              spacing={1}
               className={classes.container}
             >
               <Grid item>
@@ -141,11 +141,11 @@ function Navbar() {
 
               <Grid item style={{ alignSelf: "end" }}>
                 <Hidden smDown>
-                  <div className={classes.navlinks}>
+                  <List className={classes.navlinks}>
                     {menuItems.map((item) => (
-                      <Link
-                        underline="none"
-                        variant="button"
+                      <ListItem
+                        onClick={() => naviate(item.path)}
+                        button
                         href={item.path}
                         key={item.text}
                         className={clsx(
@@ -156,9 +156,9 @@ function Navbar() {
                         )}
                       >
                         {item.text}
-                      </Link>
+                      </ListItem>
                     ))}
-                  </div>
+                  </List>
                 </Hidden>
                 <Hidden mdUp>
                   <IconButton onClick={() => setOpen(true)}>

@@ -52,10 +52,13 @@ const itemData = [
 const useStyles = makeStyles((theme) => ({
   div: {
     marginTop: 150,
-    height: "80vh",
+    height: "75vh",
     [theme.breakpoints.down("xs")]: {
       height: "100%",
     },
+  },
+  container: {
+    height: "100%",
   },
 
   cardheader: {
@@ -103,7 +106,7 @@ function Work() {
       <Helmet>
         <title>Dinara Idrissova || Works</title>
       </Helmet>
-      <Container maxWidth="md">
+      <Container maxWidth="md" className={classes.container}>
         <Typography
           variant="h5"
           color="initial"
@@ -141,15 +144,9 @@ function Work() {
                           bottom: 20,
                           padding: 0,
                         }}
+                        onClick={() => window.open(item.url)}
                       >
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{ color: "#320b86" }}
-                        >
-                          <ChevronRightIcon />
-                        </a>
+                        <ChevronRightIcon />
                       </IconButton>
                     }
                   />
