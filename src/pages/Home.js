@@ -5,9 +5,9 @@ import {
   Typography,
   Button,
   Box,
-  Link,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -92,8 +92,7 @@ function Home() {
                 space. I&#39;ll be happy to help you to start or grow your
                 business.You may check some of my work following this
                 <Link
-                  variant="button"
-                  href="/work"
+                  to="/work"
                   style={{
                     color: "white",
                     padding: "3px",
@@ -109,9 +108,10 @@ function Home() {
               </Typography>
               <Box my={2} mb={16} py={5}>
                 <Button
+                  component={Link}
                   variant="contained"
                   color="secondary"
-                  href="/contact"
+                  to="/contact"
                   className={classes.button}
                 >
                   contact me
