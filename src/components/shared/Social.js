@@ -25,7 +25,7 @@ function Social({ direction }) {
     <Grid container direction={direction || "row"} spacing={2}>
       {socialItems.map((item) => (
         <Grid item key={item.id}>
-          <Link href={item.url}>
+          <Link href={item.url} rel="noopener noreferrer" target="_blank">
             <IconButton>
               <item.icon />
             </IconButton>

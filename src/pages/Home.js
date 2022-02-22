@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
   Box,
+  Link,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -90,7 +91,7 @@ function Home() {
                 help you to build a storefront of your business in the digital
                 space. I&#39;ll be happy to help you to start or grow your
                 business.You may check some of my work following this
-                <a
+                <Link
                   href="/work"
                   style={{
                     color: "white",
@@ -98,13 +99,14 @@ function Home() {
                   }}
                 >
                   link
-                </a>
+                </Link>
                 . Ask me anything and I&#39;ll try to help you.
                 <span style={{ display: "block", width: 20 }} />
                 Let&#39;s get in touch!
               </Typography>
               <Box my={2} mb={16} py={5}>
                 <Button
+                  component={Link}
                   variant="contained"
                   color="secondary"
                   href="/contact"
