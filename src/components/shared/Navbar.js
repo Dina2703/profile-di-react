@@ -184,18 +184,17 @@ function Navbar() {
           <Divider />
           <List>
             {menuItems.map((item) => (
-              <ListItem key={item.id}>
-                <Link
-                  underline="none"
-                  variant="button"
-                  href={item.path}
-                  color="textPrimary"
-                  className={
-                    location.pathname === item.path ? classes.active : null
-                  }
-                >
-                  {item.text}
-                </Link>
+              <ListItem
+                onClick={() => naviate(item.path)}
+                button
+                href={item.path}
+                key={item.id}
+                color="textPrimary"
+                className={
+                  location.pathname === item.path ? classes.active : null
+                }
+              >
+                {item.text}
               </ListItem>
             ))}
           </List>
