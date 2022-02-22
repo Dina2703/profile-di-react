@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
   },
   typo: {
-    fontWeight: 500,
-    fontSize: 22,
+    fontWeight: 400,
+    fontSize: 20,
     fontFamily: ["Nunito", "sans-serif"].join(","),
     [theme.breakpoints.down("sm")]: {
       fontSize: 16,
@@ -70,7 +70,7 @@ function Home() {
             <Grid item>
               <Box mt={3}>
                 <Typography
-                  variant="h5"
+                  variant="h6"
                   component="h1"
                   align="center"
                   className={classes.typoTitle}
@@ -90,7 +90,7 @@ function Home() {
                 <span style={{ display: "inline-block", width: 40 }} />I will
                 help you to build a storefront of your business in the digital
                 space. I&#39;ll be happy to help you to start or grow your
-                business.You may check some of my work following this
+                business. You may check some of my work following this
                 <Link
                   to="/work"
                   style={{
