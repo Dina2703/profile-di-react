@@ -70,7 +70,6 @@ function App() {
               <Route path="/work" element={<Work />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/notfound" element={<NotFound />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </Layout>
