@@ -66,9 +66,6 @@ const useStyles = makeStyles((theme) => ({
     bodyText: {
       order: 2,
     },
-    imgBox: {
-      marginLeft: 40,
-    },
     boxMainText: {
       width: "100%",
       marginTop: 0,
@@ -159,7 +156,7 @@ function Home() {
               </Grid>
             </Zoom>
             <Grid item xs={12} sm={6} md={4} className={classes.picture}>
-              <Box className={classes.imgBox}>
+              <Box>
                 <img
                   src={image}
                   alt="Dinara Idrissova"
