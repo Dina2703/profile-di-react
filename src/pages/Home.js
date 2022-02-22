@@ -68,7 +68,7 @@ function Home() {
         <Container maxWidth="md" className={classes.container}>
           <Grid container alignItems="center" className={classes.content}>
             <Grid item>
-              <div>
+              <Box mt={3}>
                 <Typography
                   variant="h5"
                   component="h1"
@@ -77,7 +77,7 @@ function Home() {
                 >
                   Hi there! I&#39;m Dinara and welcome to my website!
                 </Typography>
-              </div>
+              </Box>
               <br />
               <br />
               <Typography variant="h6" className={classes.typo} align="justify">

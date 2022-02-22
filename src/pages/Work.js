@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
 
   gridItem: {
     [theme.breakpoints.down("xs")]: {
-      marginLeft: 50,
+      marginLeft: 30,
     },
   },
   avatar: {

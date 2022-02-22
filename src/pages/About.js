@@ -32,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     borderRadius: "3%",
-    marginTop: 50,
+    marginTop: 130,
     [theme.breakpoints.down("xs")]: {
       marginTop: 0,
-      width: 200,
-      height: 300,
+      width: 260,
+      height: 360,
       marginLeft: 50,
     },
   },
@@ -67,11 +67,16 @@ const useStyles = makeStyles((theme) => ({
       order: 2,
     },
     imgBox: {
-      marginLeft: 60,
+      marginLeft: 40,
     },
     boxMainText: {
       width: "100%",
       marginTop: 0,
+    },
+    quote: {
+      [theme.breakpoints.down("xs")]: {
+        marginTop: 0,
+      },
     },
     typoTitle: {
       [theme.breakpoints.down("xs")]: {
@@ -139,8 +144,10 @@ function Home() {
                     help him with his tasks and I fell in love with it. I
                     graduated from one of the best coding bootcamps in the
                     country and started my journey as a Web developer.
-                    <span style={{ display: "block" }} /> I love to code because
-                    it is like an art. You create something that people interact
+                    <span style={{ display: "block" }} /> I love coding because
+                    it excites me. There is always something new, so you never
+                    get bored. Whenever I come across a problem, I get curious
+                    about solving it. You create something that people interact
                     with every day. That is an amazing feeling.
                     <span style={{ display: "block" }} /> I build websites and
                     web applications utilizing modern frameworks and design
@@ -152,19 +159,19 @@ function Home() {
               </Grid>
             </Zoom>
             <Grid item xs={12} sm={6} md={4} className={classes.picture}>
-              <Box pb={3} className={classes.imgBox}>
+              <Box className={classes.imgBox}>
                 <img
                   src={image}
                   alt="Dinara Idrissova"
-                  width={300}
-                  height={400}
+                  width={350}
+                  height={450}
                   className={classes.img}
                 />
               </Box>
             </Grid>
             <Zoom in={show}>
               <Grid item sm={10}>
-                <Box my={3}>
+                <Box mt={3} className={classes.quote}>
                   <Typography variant="subtitle2" gutterBottom align="center">
                     “Learning to write programs stretches your mind, and helps
                     you think better, creates a way of thinking about things

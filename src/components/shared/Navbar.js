@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 15,
     height: 120,
     background: "#ebe9e6",
+    [theme.breakpoints.down("sm")]: {
+      height: 100,
+    },
   },
   navlinks: {
     display: "flex",
