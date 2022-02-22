@@ -114,7 +114,7 @@ function Home() {
           >
             <Zoom in={show}>
               <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
-                <Box className={classes.boxMainText} marginTop={10}>
+                <Box className={classes.boxMainText} marginTop={7}>
                   <Typography
                     variant="h6"
                     gutterBottom

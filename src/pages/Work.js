@@ -52,7 +52,7 @@ const itemData = [
 const useStyles = makeStyles((theme) => ({
   div: {
     marginTop: 150,
-    height: "75vh",
+    height: "90vh",
     [theme.breakpoints.down("xs")]: {
       height: "100%",
     },
