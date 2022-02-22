@@ -41,7 +41,7 @@ function NotFound() {
 
               <Link to="/">
                 <Typography variant="body1" display="inline">
-                  Back to Home
+                  Back to Home page
                 </Typography>
                 <HomeIcon className={classes.homeIcon} />
               </Link>
