@@ -92,10 +92,13 @@ function Home() {
                 space. I&#39;ll be happy to help you to start or grow your
                 business.You may check some of my work following this
                 <Link
+                  variant="button"
                   href="/work"
                   style={{
                     color: "white",
                     padding: "3px",
+                    textDecoration: "underline",
+                    textTransform: "lowercase",
                   }}
                 >
                   link
@@ -106,7 +109,6 @@ function Home() {
               </Typography>
               <Box my={2} mb={16} py={5}>
                 <Button
-                  component={Link}
                   variant="contained"
                   color="secondary"
                   href="/contact"
