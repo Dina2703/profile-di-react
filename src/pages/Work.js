@@ -6,12 +6,11 @@ import {
   Typography,
   Container,
   Grid,
-  IconButton,
   CardHeader,
+  Link,
 } from "@material-ui/core";
 import { useEffect, useState } from "react";
 
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { Helmet } from "react-helmet";
 
 const itemData = [
@@ -77,31 +76,24 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 350,
     marginBottom: 30,
-    border: "15px solid  #e8eaf6",
+    border: "10px solid  #fff",
     borderBottom: "none",
     position: "relative",
   },
   media: {
     height: 200,
     width: "100%",
+    objectFit: "cover",
     transition: "all 0.2s linear",
     "&:hover": {
       transform: "scale(1.05)",
     },
-  },
-  content: {
-    background: "#e8eaf6",
-    paddingTop: 10,
-    padding: 0,
   },
 
   gridItem: {
     [theme.breakpoints.down("xs")]: {
       marginLeft: 30,
     },
-  },
-  avatar: {
-    background: "#66bb6a",
   },
 }));
 
@@ -138,30 +130,26 @@ function Work() {
             >
               <Card className={classes.root}>
                 <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={item.img}
-                    title={item.title}
-                  />
-
-                  <CardHeader
-                    style={{ background: "#e8eaf6" }}
-                    subheader={item.title}
-                    action={
-                      <IconButton
-                        aria-label="go to the template website"
-                        style={{
-                          position: "absolute",
-                          right: 10,
-                          bottom: 20,
-                          padding: 0,
-                        }}
-                        onClick={() => window.open(item.url)}
-                      >
-                        <ChevronRightIcon />
-                      </IconButton>
-                    }
-                  />
+                  <Link
+                    href={item.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <CardMedia
+                      className={classes.media}
+                      image={item.img}
+                      title={item.title}
+                    />
+                  </Link>
+                  <figure
+                    className="cards--item--pic-wrap"
+                    data-category={item.type}
+                  >
+                    <CardHeader
+                      style={{ background: "#fff" }}
+                      subheader={item.title}
+                    />
+                  </figure>
                 </CardActionArea>
               </Card>
             </Grid>
