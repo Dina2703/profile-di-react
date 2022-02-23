@@ -46,7 +46,7 @@ function Contact() {
       <Container className={classes.formContainer} maxWidth="md">
         <Box>
           <Typography variant="h6" color="initial">
-            Say Hey
+            Hey
           </Typography>
           <Typography variant="body2" color="initial">
             Whether you want to work with me or just need some advice, start

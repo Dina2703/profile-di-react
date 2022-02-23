@@ -17,7 +17,7 @@ import { Helmet } from "react-helmet";
 const itemData = [
   {
     img: "/assets/book-shelf.png",
-    title: "BookShelf",
+    title: "BookShelf website",
     type: "template",
     cols: 2,
     id: 1,
@@ -25,7 +25,7 @@ const itemData = [
   },
   {
     img: "/assets/nucamp-site.png",
-    title: "NuCamp",
+    title: "NuCamp website",
     type: "template",
     cols: 2,
     id: 2,
@@ -47,12 +47,20 @@ const itemData = [
     id: 4,
     url: "https://memory-game-dina.netlify.app/",
   },
+  {
+    img: "/assets/travel.png",
+    title: "Travel website",
+    type: "template",
+    cols: 2,
+    id: 5,
+    url: "https://travel-react-template.netlify.app/",
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
   div: {
     marginTop: 150,
-    height: "90vh",
+    height: "110vh",
     [theme.breakpoints.down("xs")]: {
       height: "100%",
     },
@@ -76,6 +84,10 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 200,
     width: "100%",
+    transition: "all 0.2s linear",
+    "&:hover": {
+      transform: "scale(1.05)",
+    },
   },
   content: {
     background: "#e8eaf6",
