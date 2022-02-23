@@ -1,0 +1,17 @@
+{
+  "app_title": "Title",
+  "language": "Language",
+  "home-message": {
+    "part1": "Hi there! I'm Dinara and welcome to my website!",
+    "part2": "Nowadays, having a website is not a luxury but a necessity, customers increasingly search for products and services online and if your business is not “on the internet” it practically invisible for many of potential customers.",
+    "part3": "I will help you to build a storefront of your business in the digital space. I'll be happy to help you to start or grow your business. You may check some of my work following thislink. Ask me anything and I'll try to help you.",
+    "part4": "Let's get in touch!"
+  },
+  "about-message": {
+    "part1": "A few words about me",
+    "part2": "My name is Dinara based in Georgia, US. I'm originally from Kazakhstan. I have more than ten years of experience in BigPharma with various international companies. After we moved to America with my family in 2017, I got a chance to try something new from scratch. And I started my searching. Thanks to my elder kid, when he started taking coding classes for kids, the first time I tried to write code to help him with his tasks and I fell in love with it. I graduated from one of the best coding bootcamps in the country and started my journey as a Web developer.",
+    "part3": "I love coding because it excites me. There is always something new, so you never get bored. Whenever I come across a problem, I get curious about solving it. You create something that people interact with every day. That is an amazing feeling.",
+    "part4": "I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. I will be happy and honored to help you build or upgrade your website.",
+    "part5": "\\“Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.\\”"
+  }
+}
