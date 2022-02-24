@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Paper,
   Typography,
@@ -8,7 +9,6 @@ import {
   Zoom,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
 import { green } from "@material-ui/core/colors";
 import { Helmet } from "react-helmet";
 
@@ -92,6 +92,8 @@ const useStyles = makeStyles((theme) => ({
 const img = "/assets/myPic2.jpeg";
 
 function Home() {
+  const { t } = useTranslation();
+
   const classes = useStyles();
   const [image, setImage] = useState(null);
   const [show, setShow] = useState(false);
@@ -121,7 +123,7 @@ function Home() {
                     align="justify"
                     className={classes.typoTitle}
                   >
-                    A few words about me
+                    <div>{t("about-message.part1")}</div>
                   </Typography>
                   <br />
 
@@ -131,25 +133,11 @@ function Home() {
                     className={classes.typoPara}
                   >
                     <span style={{ display: "inline-block", width: 20 }} />
-                    My name is Dinara based in Georgia, US. I&#39;m originally
-                    from Kazakhstan. I have more than ten years of experience in
-                    BigPharma with various international companies. After we
-                    moved to America with my family in 2017, I got a chance to
-                    try something new from scratch. And I started my searching.
-                    Thanks to my elder kid, when he started taking coding
-                    classes for kids, the first time I tried to write code to
-                    help him with his tasks and I fell in love with it. I
-                    graduated from one of the best coding bootcamps in the
-                    country and started my journey as a Web developer.
-                    <span style={{ display: "block" }} /> I love coding because
-                    it excites me. There is always something new, so you never
-                    get bored. Whenever I come across a problem, I get curious
-                    about solving it. You create something that people interact
-                    with every day. That is an amazing feeling.
-                    <span style={{ display: "block" }} /> I build websites and
-                    web applications utilizing modern frameworks and design
-                    practices tailored to every particular business. I will be
-                    happy and honored to help you build or upgrade your website.
+                    {t("about-message.part2")}
+                    <span style={{ display: "block" }} />{" "}
+                    {t("about-message.part3")}
+                    <span style={{ display: "block" }} />{" "}
+                    {t("about-message.part4")}
                     <br />
                   </Typography>
                 </Box>
