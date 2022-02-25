@@ -111,7 +111,7 @@ function Work() {
   return (
     <div className={classes.div}>
       <Helmet>
-        <title>Dinara Idrissova || Works</title>
+        <title>Dinara Idrissova || {t("navbar.work")}</title>
       </Helmet>
       <Container maxWidth="md" className={classes.container}>
         <Typography

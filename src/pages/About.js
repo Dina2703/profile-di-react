@@ -104,7 +104,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Dinara Idrissova || About</title>
+        <title>Dinara Idrissova || {t("navbar.about")}</title>
       </Helmet>
       <Paper className={classes.section}>
         <Container maxWidth="md" className={classes.container}>

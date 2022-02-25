@@ -43,7 +43,7 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Dinara Idrissova || Contact</title>
+        <title>Dinara Idrissova || {t("navbar.contact")}</title>
       </Helmet>
       <CssBaseline />
       <Container className={classes.formContainer} maxWidth="md">
