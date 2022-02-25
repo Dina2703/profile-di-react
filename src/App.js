@@ -77,7 +77,6 @@ function App() {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/*" element={<NotFound />} />
-              <Route path="" element={<Navigate to="/*" />} />
             </Routes>
           </Layout>
         </ThemeProvider>
