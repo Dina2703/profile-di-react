@@ -9,8 +9,8 @@ function Layout({ children }) {
         <title>Dinara Idrissova || Web Developer</title>
         <meta
           name="description"
-          content="Hi there! My name is Dinara. I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. 
-            Я создаю веб-сайты и веб-приложения, используя современные фреймворки и методы проектирования, адаптированные к каждому конкретному бизнесу I'll be happy to help you to start or grow your business. GA, USA, Atlanta, веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение, шаблоны, Almaty, Kazakhstan, Astana, Shimkent"
+          content="My name is Dinara Idrissova. I'm FrontEnd Developer. I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. Я создаю веб-сайты и веб-приложения, используя современные фреймворки и методы проектирования, адаптированные к каждому конкретному бизнесу, 
+          Алматы, Казахстан, Астана. I'll be happy to help you to start or grow your business. React.js, MUI, frontEnd, web-developer, css, html, web design, web application, github, templates, coffee-shop, 'game app with react.js', GA, USA,GA, USA, Atlanta, веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение, шаблоны, Almaty, Kazakhstan, Astana, Shimkent"
         />
         <meta
           name="keywords"
