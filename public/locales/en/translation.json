@@ -15,5 +15,13 @@
     "part3": "I love coding because it excites me. There is always something new, so you never get bored. Whenever I come across a problem, I get curious about solving it. You create something that people interact with every day. That is an amazing feeling.",
     "part4": "I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. I will be happy and honored to help you build or upgrade your website.",
     "part5": "\\“Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.\\”"
+  },
+  "form": {
+    "title": "Get in Touch",
+    "line": "Please fill out the quick form and I will be in touch with lightning speed.",
+    "btn": "send message"
+  },
+  "work": {
+    "title": "Some of my works"
   }
 }
