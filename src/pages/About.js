@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const img = "/assets/myPic2.jpeg";
+const img = "/assets/myPic2.jpg";
 
 function Home() {
   const { t } = useTranslation();
