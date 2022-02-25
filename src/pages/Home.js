@@ -53,9 +53,10 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     [theme.breakpoints.down("sm")]: {
-      width: 120,
+      width: 140,
       height: 40,
-      fontSize: 12,
+      fontSize: 10,
+      fontWeight: 800,
     },
   },
 }));
