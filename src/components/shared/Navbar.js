@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import {
   AppBar,
   Toolbar,
@@ -47,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navlinks: {
     display: "flex",
+
     letterSpacing: "0.08em",
     fontWeight: 400,
   },
@@ -69,18 +71,21 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: grey[800],
     textTransform: "lowercase",
-    fontSize: 18,
+    paddingLeft: 0,
+    paddingRight: 0,
+    justifyContent: "center",
+    fontSize: 16,
     "&:hover": {
       color: grey[500],
     },
   },
   active: {
-    borderBottom: "3px solid #673ab7",
+    borderBottom: "2px solid #673ab7",
   },
 }));
 
 function Navbar() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -93,22 +98,22 @@ function Navbar() {
 
   const menuItems = [
     {
-      text: "home",
+      text: "navbar.home",
       path: "/",
       id: 2,
     },
     {
-      text: "about",
+      text: "navbar.about",
       path: "/about",
       id: 3,
     },
     {
-      text: "work",
+      text: "navbar.work",
       path: "/work",
       id: 4,
     },
     {
-      text: "contact",
+      text: "navbar.contact",
       path: "/contact",
       id: 5,
     },
@@ -140,13 +145,8 @@ function Navbar() {
             </button>
           </Box>
           <Toolbar variant="regular">
-            <Grid
-              container
-              justifyContent="space-between"
-              spacing={1}
-              className={classes.container}
-            >
-              <Grid item>
+            <Grid container justifyContent="space-between" spacing={1}>
+              <Grid item md={5}>
                 <Link href="/" className={classes.logoLink}>
                   <Box>
                     <img
@@ -177,7 +177,7 @@ function Navbar() {
                 </Link>
               </Grid>
 
-              <Grid item style={{ alignSelf: "end" }}>
+              <Grid item style={{ alignSelf: "end" }} md={6}>
                 <Hidden smDown>
                   <List className={classes.navlinks}>
                     {menuItems.map((item) => (
@@ -193,7 +193,7 @@ function Navbar() {
                             : null
                         )}
                       >
-                        {item.text}
+                        {t(item.text)}
                       </ListItem>
                     ))}
                   </List>
@@ -232,7 +232,7 @@ function Navbar() {
                   location.pathname === item.path ? classes.active : null
                 }
               >
-                {item.text}
+                {t(item.text)}
               </ListItem>
             ))}
           </List>
