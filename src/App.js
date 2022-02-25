@@ -54,11 +54,12 @@ function App() {
           <title>Dinara Idrissova || Web Developer</title>
           <meta
             name="description"
-            content="Hi there! My name is Dinara and I'm really excited to welcome you to my website! I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business.  I will help you to build a storefront of your business in the digital space. I'll be happy to help you to start or grow your business. Ask me anything and I'll try to help you."
+            content="Hi there! My name is Dinara. I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. 
+            Я создаю веб-сайты и веб-приложения, используя современные фреймворки и методы проектирования, адаптированные к каждому конкретному бизнесу I'll be happy to help you to start or grow your business. GA, USA, Atlanta, веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение, шаблоны, Almaty, Kazakhstan, Astana, Shimkent"
           />
           <meta
             name="keywords"
-            content="React.js, MUI, frontEnd, web-developer, css, html, web design, web application, github, templates, coffee-shop, 'game app with react.js'"
+            content="React.js, MUI, frontEnd, web-developer, css, html, web design, web application, github, templates, coffee-shop, 'game app with react.js, Atlanta, GA, USA, KZ, RU, ru, kz, веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение,  веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение,  Almaty, Kazakhstan"
           />
         </Helmet>
         <ThemeProvider theme={theme}>
