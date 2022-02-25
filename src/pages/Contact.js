@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Container,
   TextField,
@@ -36,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Contact() {
+  const { t } = useTranslation();
+
   const classes = useStyles();
   return (
     <>
@@ -46,11 +49,10 @@ function Contact() {
       <Container className={classes.formContainer} maxWidth="md">
         <Box>
           <Typography variant="h6" color="initial">
-            Hey
+            {t("form.title")}
           </Typography>
           <Typography variant="body2" color="initial">
-            Whether you want to work with me or just need some advice, start
-            here.
+            {t("form.line")}
           </Typography>
         </Box>
         <form
@@ -115,7 +117,7 @@ function Contact() {
             onClick={() => console.log("clicked")}
             endIcon={<SendTwoToneIcon />}
           >
-            send message!
+            {t("form.btn")}
           </Button>
         </form>
       </Container>

@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
-import { Paper, Typography, Grid, Container, Box } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
+import {
+  Paper,
+  Typography,
+  Grid,
+  Container,
+  Box,
+  Zoom,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
 import { green } from "@material-ui/core/colors";
 import { Helmet } from "react-helmet";
 
@@ -85,10 +92,13 @@ const useStyles = makeStyles((theme) => ({
 const img = "/assets/myPic2.jpeg";
 
 function Home() {
+  const { t } = useTranslation();
+
   const classes = useStyles();
   const [image, setImage] = useState(null);
-
+  const [show, setShow] = useState(false);
   useEffect(() => {
+    setShow(true);
     setImage(img);
   }, []);
   return (
@@ -104,72 +114,60 @@ function Home() {
             className={classes.contentContainer}
             justifyContent="space-around"
           >
-            <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
-              <Box className={classes.boxMainText} marginTop={7}>
-                <Typography
-                  variant="h6"
-                  gutterBottom
-                  align="justify"
-                  className={classes.typoTitle}
-                >
-                  A few words about me
-                </Typography>
-                <br />
-
-                <Typography
-                  variant="body2"
-                  align="justify"
-                  className={classes.typoPara}
-                >
-                  <span style={{ display: "inline-block", width: 20 }} />
-                  My name is Dinara based in Georgia, US. I&#39;m originally
-                  from Kazakhstan. I have more than ten years of experience in
-                  BigPharma with various international companies. After we moved
-                  to America with my family in 2017, I got a chance to try
-                  something new from scratch. And I started my searching. Thanks
-                  to my elder kid, when he started taking coding classes for
-                  kids, the first time I tried to write code to help him with
-                  his tasks and I fell in love with it. I graduated from one of
-                  the best coding bootcamps in the country and started my
-                  journey as a Web developer.
-                  <span style={{ display: "block" }} /> I love coding because it
-                  excites me. There is always something new, so you never get
-                  bored. Whenever I come across a problem, I get curious about
-                  solving it. You create something that people interact with
-                  every day. That is an amazing feeling.
-                  <span style={{ display: "block" }} /> I build websites and web
-                  applications utilizing modern frameworks and design practices
-                  tailored to every particular business. I will be happy and
-                  honored to help you build or upgrade your website.
+            <Zoom in={show}>
+              <Grid item xs={12} sm={5} md={6} className={classes.bodyText}>
+                <Box className={classes.boxMainText} marginTop={7}>
+                  <Typography
+                    variant="h6"
+                    gutterBottom
+                    align="justify"
+                    className={classes.typoTitle}
+                  >
+                    <div>{t("about-message.part1")}</div>
+                  </Typography>
                   <br />
-                </Typography>
-              </Box>
-            </Grid>
 
+                  <Typography
+                    variant="body2"
+                    align="justify"
+                    className={classes.typoPara}
+                  >
+                    <span style={{ display: "inline-block", width: 20 }} />
+                    {t("about-message.part2")}
+                    <span style={{ display: "block" }} />{" "}
+                    {t("about-message.part3")}
+                    <span style={{ display: "block" }} />{" "}
+                    {t("about-message.part4")}
+                    <br />
+                  </Typography>
+                </Box>
+              </Grid>
+            </Zoom>
             <Grid item xs={12} sm={6} md={4} className={classes.picture}>
               <Box>
                 <img
                   src={image}
                   alt="Dinara Idrissova"
-                  width={350}
-                  height={450}
+                  width={310}
+                  height={410}
                   className={classes.img}
                 />
               </Box>
             </Grid>
-
-            <Grid item sm={10}>
-              <Box mt={3} className={classes.quote}>
-                <Typography variant="subtitle2" gutterBottom align="center">
-                  “Learning to write programs stretches your mind, and helps you
-                  think better, creates a way of thinking about things that I
-                  think is helpful in all domains.”
-                </Typography>
-                <Typography variant="body2" align="right">
-                  -- Bill Gates
-                </Typography>
-              </Box>
-            </Grid>
+            <Zoom in={show}>
+              <Grid item sm={10}>
+                <Box mt={3} className={classes.quote}>
+                  <Typography variant="subtitle2" gutterBottom align="center">
+                    “Learning to write programs stretches your mind, and helps
+                    you think better, creates a way of thinking about things
+                    that I think is helpful in all domains.”
+                  </Typography>
+                  <Typography variant="body2" align="right">
+                    -- Bill Gates
+                  </Typography>
+                </Box>
+              </Grid>
+            </Zoom>
           </Grid>
         </Container>
       </Paper>

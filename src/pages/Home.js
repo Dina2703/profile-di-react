@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import {
   Container,
   Grid,
@@ -7,7 +9,6 @@ import {
   Box,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -52,15 +53,17 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     [theme.breakpoints.down("sm")]: {
-      width: 120,
+      width: 140,
       height: 40,
-      fontSize: 12,
+      fontSize: 10,
+      fontWeight: 800,
     },
   },
 }));
 
 function Home() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Paper className={classes.section}>
@@ -75,22 +78,17 @@ function Home() {
                   align="center"
                   className={classes.typoTitle}
                 >
-                  Hi there! I&#39;m Dinara and welcome to my website!
+                  <div>{t("home-message.part1")}</div>
                 </Typography>
               </Box>
               <br />
               <br />
               <Typography variant="h6" className={classes.typo} align="justify">
                 <span style={{ display: "inline-block", width: 40 }} />
-                Nowadays, having a website is not a luxury but a necessity,
-                customers increasingly search for products and services online
-                and if your business is not “on the internet” it practically
-                invisible for many of potential customers.
+                {t("home-message.part2")}
                 <br />
-                <span style={{ display: "inline-block", width: 40 }} />I will
-                help you to build a storefront of your business in the digital
-                space. I&#39;ll be happy to help you to start or grow your
-                business. You may check some of my work following this
+                <span style={{ display: "inline-block", width: 40 }} />
+                {t("home-message.part3")}
                 <Link
                   to="/work"
                   style={{
@@ -100,11 +98,11 @@ function Home() {
                     textTransform: "lowercase",
                   }}
                 >
-                  link
+                  {t("home-message.link")}
                 </Link>
-                . Ask me anything and I&#39;ll try to help you.
+                {t("home-message.part4")}
                 <span style={{ display: "block", width: 20 }} />
-                Let&#39;s get in touch!
+                {t("home-message.part5")}
               </Typography>
               <Box my={2} mb={16} py={5}>
                 <Button
@@ -114,7 +112,7 @@ function Home() {
                   to="/contact"
                   className={classes.button}
                 >
-                  contact me
+                  {t("btn")}
                 </Button>
               </Box>
             </Grid>

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -98,6 +99,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Work() {
+  const { t } = useTranslation();
+
   const classes = useStyles();
   const [data, setData] = useState([]);
 
@@ -117,7 +120,7 @@ function Work() {
           align="center"
           style={{ marginBottom: 20 }}
         >
-          Some of my works
+          {t("work.title")}
         </Typography>
         <Grid container>
           {data.map((item) => (

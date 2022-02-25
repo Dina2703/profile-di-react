@@ -68,6 +68,7 @@ function App() {
         </Helmet>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
