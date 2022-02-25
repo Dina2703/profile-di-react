@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   AppBar,
   Toolbar,
@@ -27,8 +28,17 @@ const logo =
   "https://see.fontimg.com/api/renderfont4/1G8vj/eyJyIjoiZnMiLCJoIjoxNjYsInciOjIwMDAsImZzIjo4MywiZmdjIjoiIzc4NDA4MyIsImJnYyI6IiM0NTNFM0UiLCJ0IjoxfQ/RGluYXJhIElkcmlzc292YQ/snow-puppets-personal-use-medium.png";
 
 const useStyles = makeStyles((theme) => ({
+  lang: {
+    marginTop: "5px",
+    display: "flex",
+    justifyContent: "flex-end",
+    background: "#ebe9e6",
+    maxWidth: "100%",
+  },
+  langBtn: {
+    margin: "1px",
+  },
   appbar: {
-    paddingTop: 15,
     height: 120,
     background: "#ebe9e6",
     [theme.breakpoints.down("sm")]: {
@@ -60,7 +70,6 @@ const useStyles = makeStyles((theme) => ({
     color: grey[800],
     textTransform: "lowercase",
     fontSize: 18,
-
     "&:hover": {
       color: grey[500],
     },
@@ -71,6 +80,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar() {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -104,6 +119,26 @@ function Navbar() {
       <AppBar position="fixed" elevation={2} className={classes.appbar}>
         <CssBaseline />
         <Container maxWidth="md">
+          <Box className={classes.lang}>
+            <button
+              onClick={() => changeLanguage("kz")}
+              className={classes.langBtn}
+            >
+              <span className="fi fis fi-kz" />
+            </button>
+            <button
+              onClick={() => changeLanguage("ru")}
+              className={classes.langBtn}
+            >
+              <span className="fi fis fi-ru" />
+            </button>
+            <button
+              onClick={() => changeLanguage("en")}
+              className={classes.langBtn}
+            >
+              <span className="fi fis fi-gb" />
+            </button>
+          </Box>
           <Toolbar variant="regular">
             <Grid
               container

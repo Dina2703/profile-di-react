@@ -148,8 +148,8 @@ function Home() {
                 <img
                   src={image}
                   alt="Dinara Idrissova"
-                  width={350}
-                  height={450}
+                  width={310}
+                  height={410}
                   className={classes.img}
                 />
               </Box>

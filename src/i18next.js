@@ -4,18 +4,14 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 i18next
+  .use(initReactI18next)
   .use(Backend)
   .use(LanguageDetector)
-  .use(initReactI18next)
   .init({
-    fallbackLng: "ru",
-    debug: true,
+    fallbackLng: "en",
     detection: {
       order: ["queryString", "cookie"],
-      cache: ["cookie"],
-    },
-    interpolation: {
-      escapeValue: false,
+      caches: ["cookie"],
     },
   });
 

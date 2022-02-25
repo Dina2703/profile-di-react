@@ -63,11 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
-
-  const changeLangauge = (language) => {
-    i18n.changeLanguage(language);
-  };
+  const { t } = useTranslation();
 
   return (
     <Paper className={classes.section}>
@@ -75,9 +71,6 @@ function Home() {
         <Container maxWidth="md" className={classes.container}>
           <Grid container alignItems="center" className={classes.content}>
             <Grid item>
-              <button onClick={() => changeLangauge("en")}>EN</button>
-              <button onClick={() => changeLangauge("ru")}>RU</button>
-              <button onClick={() => changeLangauge("kz")}>KZ</button>
               <Box mt={3}>
                 <Typography
                   variant="h6"
