@@ -1,4 +1,10 @@
 {
+  "navbar": {
+    "home": "home",
+    "about": "about",
+    "work": "work",
+    "contact": "contact"
+  },
   "language": "Language",
   "btn": "CONTACT ME",
   "home-message": {

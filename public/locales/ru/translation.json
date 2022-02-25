@@ -1,4 +1,10 @@
 {
+  "navbar": {
+    "home": "главная",
+    "about": "обо мне",
+    "work": "работы",
+    "contact": "контакт"
+  },
   "language": "Язык",
   "btn": "Оставить заявку",
   "home-message": {

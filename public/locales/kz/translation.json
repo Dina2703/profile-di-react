@@ -1,4 +1,10 @@
 {
+  "navbar": {
+    "home": "басты",
+    "about": "мен туралы",
+    "work": "жұмыс",
+    "contact": "байланыс"
+  },
   "language": "Тіл",
   "btn": "Хабарласу жолы",
   "home-message": {
