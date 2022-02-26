@@ -103,7 +103,11 @@ function Contact() {
           />
           <input type="hidden" name="_subject" value="New submission!" />
 
-          <input type="hidden" name="_next" value="http://localhost:3000/" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://dinaraidrissova.com/"
+          />
           <input
             type="hidden"
             name="_autoresponse"
