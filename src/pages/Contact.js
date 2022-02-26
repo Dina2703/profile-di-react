@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Contact() {
   const { t } = useTranslation();
-
   const classes = useStyles();
+
   return (
     <>
       <Helmet>
@@ -68,6 +68,7 @@ function Contact() {
             color="secondary"
             id="your-full-name"
             required
+            autoComplete="none"
             name="name"
             label="Name"
             fullWidth
@@ -78,6 +79,7 @@ function Contact() {
             className={classes.field}
             variant="outlined"
             type="email"
+            autoComplete="none"
             color="secondary"
             name="email"
             id="email"
@@ -102,12 +104,13 @@ function Contact() {
             placeholder="Please, type your project details "
           />
           <input type="hidden" name="_subject" value="New submission!" />
-
           <input
             type="hidden"
             name="_next"
-            value="https://dinaraidrissova.com/"
+            // value="https://dinaraidrissova.com/contact"
+            value="http://localhost:3000/thanks"
           />
+
           <input
             type="hidden"
             name="_autoresponse"
@@ -118,7 +121,6 @@ function Contact() {
             type="submit"
             variant="contained"
             color="secondary"
-            onClick={() => console.log("clicked")}
             endIcon={<SendTwoToneIcon />}
           >
             {t("form.btn")}

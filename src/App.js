@@ -10,6 +10,7 @@ import { createTheme, CssBaseline, ThemeProvider } from "@material-ui/core";
 
 import "./App.css";
 import { Helmet } from "react-helmet";
+import Thanks from "./pages/Thanks";
 
 const theme = createTheme({
   palette: {
@@ -54,7 +55,7 @@ function App() {
           <title>Dinara Idrissova || Web Developer</title>
           <meta
             name="description"
-            content="Hi there! My name is Dinara. I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. 
+            content="Hi there! My name is Dinara.  I build websites and web applications utilizing modern frameworks and design practices tailored to every particular business. 
             Я создаю веб-сайты и веб-приложения, используя современные фреймворки и методы проектирования, адаптированные к каждому конкретному бизнесу I'll be happy to help you to start or grow your business. GA, USA, Atlanta, веб-разработчик, CSS, HTML, веб-дизайн, веб-приложение, шаблоны, Almaty, Kazakhstan, Astana, Shimkent"
           />
           <meta
@@ -72,6 +73,7 @@ function App() {
               <Route path="/work" element={<Work />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/thanks" element={<Thanks />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </Layout>
