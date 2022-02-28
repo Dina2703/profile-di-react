@@ -42,14 +42,6 @@ function Contact() {
   const { t } = useTranslation();
   const classes = useStyles();
 
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("");
-
-  const [nameError, setNameError] = useState(false);
-  const [messageError, setMessageError] = useState(false);
-  const [nameErrText, setNameErrText] = useState("");
-  const [messageErrText, setMessageErrText] = useState("");
   const [emailErrTxt, setEmailErrTxt] = useState("");
   const [emailErr, setEmailErr] = useState(false);
   const [btn, setBtn] = useState(true);
@@ -61,35 +53,6 @@ function Contact() {
     } else {
       setEmailErrTxt("Please, enter valid Email");
       setEmailErr(true);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessageError(false);
-    setMessageErrText("");
-    setNameError(false);
-    setNameErrText("");
-    setEmailErr(false);
-    setEmailErrTxt("");
-
-    if (name === "") {
-      setNameError(true);
-      setNameErrText("please, enter your name ");
-    }
-
-    if (message === "") {
-      setMessageError(true);
-      setMessageErrText("the message field should not be empty");
-    }
-    if (email === "") {
-      setEmailErr(true);
-      setEmailErrTxt("please, enter your email");
-    }
-
-    if (name && message && email) {
-      setBtn(false);
-      console.log("all set");
     }
   };
 
@@ -109,22 +72,18 @@ function Contact() {
           </Typography>
         </Box>
         <form
-          onSubmit={handleSubmit}
           noValidate
           autoComplete="off"
           action="https://formsubmit.co/dinara.idrissova@list.ru"
           method="POST"
         >
           <TextField
-            onChange={(e) => setName(e.target.value)}
             className={classes.field}
             variant="outlined"
             type="text"
             color="secondary"
             id="your-full-name"
             required
-            error={nameError}
-            helperText={nameErrText}
             autoComplete="none"
             name="name"
             label="Name"
@@ -135,7 +94,6 @@ function Contact() {
           <TextField
             onChange={(e) => {
               validateEmail(e);
-              setEmail(e.target.value);
               setBtn(!e.target.value);
             }}
             className={classes.field}
@@ -154,18 +112,15 @@ function Contact() {
           />
 
           <TextField
-            onChange={(e) => setMessage(e.target.value)}
             className={classes.field}
             variant="outlined"
             type="text"
             color="secondary"
             id="message-with-details"
             name="message"
-            helperText={messageErrText}
             label="Message"
             multiline
             required
-            error={messageError}
             minRows={5}
             fullWidth
             placeholder="Please, type your project details "
