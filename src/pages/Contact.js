@@ -129,8 +129,8 @@ function Contact() {
           <input
             type="hidden"
             name="_next"
-            // value="https://dinaraidrissova.com/thanks"
-            value="http://localhost:3000/thanks"
+            value="https://dinaraidrissova.com/thanks"
+            // value="http://localhost:3000/thanks"
           />
 
           <input
