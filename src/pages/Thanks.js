@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Paper, Container, Typography, Grid, Box } from "@material-ui/core";
+import { Paper, Container, Typography, Grid } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import SentimentSatisfiedSharpIcon from "@material-ui/icons/SentimentSatisfiedSharp";
 import { Link } from "react-router-dom";
