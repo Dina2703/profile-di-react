@@ -3,9 +3,11 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { Grid, IconButton, Link } from "@material-ui/core";
 
 const socialItems = [
+  { icon: WhatsAppIcon, id: 0, url: "https://wa.me/14042457101" },
   { icon: GitHubIcon, id: 1, url: "https://github.com/Dina2703" },
   {
     icon: InstagramIcon,
