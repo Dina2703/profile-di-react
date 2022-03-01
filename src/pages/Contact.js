@@ -50,6 +50,7 @@ function Contact() {
     const email = e.target.value;
     if (validator.isEmail(email)) {
       setEmailErrTxt("");
+      setEmailErr(false);
     } else {
       setEmailErrTxt("Please, enter valid Email");
       setEmailErr(true);
