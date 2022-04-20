@@ -4,23 +4,19 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    paddingBottom: 10,
+    height: "8em",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     position: "sticky",
-    bottom: 0,
     background: "#fcfaf7",
     width: "100%",
   },
-  container: {},
-  gridContainer: {
-    paddingTop: 10,
-  },
-
   copyRight: {
     textAlign: "center",
-  },
-  [theme.breakpoints.down("sm")]: {
-    gridContainer: {
-      paddingTop: 0,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 10,
+      marginBottom: 10,
     },
   },
 }));
@@ -29,13 +25,8 @@ function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="md" className={classes.container}>
-        <Grid
-          container
-          className={classes.gridContainer}
-          alignItems="center"
-          justifyContent="space-around"
-        >
+      <Container maxWidth="md">
+        <Grid container alignItems="center" justifyContent="space-around">
           <Grid item sm={6}>
             <Social direction="row" />
           </Grid>
