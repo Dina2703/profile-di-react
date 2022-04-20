@@ -13,6 +13,7 @@ import {
 import { useEffect, useState } from "react";
 
 import { Helmet } from "react-helmet";
+import Spinner from "../components/shared/Spinner";
 
 const itemData = [
   {
@@ -103,9 +104,13 @@ function Work() {
 
   const classes = useStyles();
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setData(itemData);
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
   }, []);
 
   return (
@@ -122,42 +127,46 @@ function Work() {
         >
           {t("work.title")}
         </Typography>
-        <Grid container>
-          {data.map((item) => (
-            <Grid
-              item
-              xs={10}
-              sm={6}
-              key={item.id}
-              className={classes.gridItem}
-            >
-              <Card className={classes.root}>
-                <CardActionArea>
-                  <Link
-                    href={item.url}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <CardMedia
-                      className={classes.media}
-                      image={item.img}
-                      title={item.title}
-                    />
-                  </Link>
-                  <figure
-                    className="cards--item--pic-wrap"
-                    data-category={item.type}
-                  >
-                    <CardHeader
-                      style={{ background: "#fff" }}
-                      subheader={item.title}
-                    />
-                  </figure>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <Grid container>
+            {data.map((item) => (
+              <Grid
+                item
+                xs={10}
+                sm={6}
+                key={item.id}
+                className={classes.gridItem}
+              >
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <Link
+                      href={item.url}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <CardMedia
+                        className={classes.media}
+                        image={item.img}
+                        title={item.title}
+                      />
+                    </Link>
+                    <figure
+                      className="cards--item--pic-wrap"
+                      data-category={item.type}
+                    >
+                      <CardHeader
+                        style={{ background: "#fff" }}
+                        subheader={item.title}
+                      />
+                    </figure>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        )}
       </Container>
     </div>
   );
