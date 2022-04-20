@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   content: {
-    height: "80%",
+    height: "100%",
   },
   overlay: {
     backgroundColor: "rgba(0,0,0,0.7)",
