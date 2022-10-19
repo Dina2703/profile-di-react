@@ -56,12 +56,20 @@ const itemData = [
     id: 5,
     url: "https://travel-react-template.netlify.app/",
   },
+  {
+    img: "./assets/anara-eng.jpeg",
+    title: "Personal website",
+    type: "template",
+    cols: 2,
+    id: 6,
+    url: "https://eng-with-anara.netlify.app/",
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
   div: {
     marginTop: 150,
-    height: "120vh",
+    height: "100%",
     [theme.breakpoints.down("xs")]: {
       height: "100%",
     },

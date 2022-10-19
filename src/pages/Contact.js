@@ -16,8 +16,11 @@ import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
-    height: "100vh",
-    paddingTop: 150,
+    height: "100%",
+    paddingTop: 170,
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: 150,
+    },
   },
   btn: {
     margin: 20,

@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
     margin: "1px",
   },
   appbar: {
-    height: 120,
+    height: 140,
     background: "#ebe9e6",
     [theme.breakpoints.down("sm")]: {
-      height: 100,
+      height: 110,
     },
   },
   navlinks: {

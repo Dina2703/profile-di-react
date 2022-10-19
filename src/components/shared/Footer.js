@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     position: "sticky",
     background: "#fcfaf7",
     width: "100%",
+    zIndex: 20,
   },
   copyRight: {
     textAlign: "center",
